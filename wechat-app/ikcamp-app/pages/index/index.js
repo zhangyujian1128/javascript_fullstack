@@ -7,6 +7,11 @@ Page({
   data: {
     articleList: articleList.data
   },
+  gotoDetail:function(){
+    wx.navigateTo({
+      url:'../detail/index'
+    })
+  },
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
