@@ -1,0 +1,16 @@
+<!--pages/category/category.wxml-->
+<!--pages/category/category.wxml-->
+<view class="main">
+  <view class="category-left">
+    <view 
+    wx:for="{{category}}" 
+    wx:key="{{item.id}}" 
+    data-id="{{item.id}}"
+    data-index="{{index}}"
+    class="cate-list {{curIndex === index ? 'on' : ''}}"
+    bindtap="switchTab"
+    >
+      {{item.name}}
+    </view>
+  </view>
+</view>
