@@ -1,0 +1,15 @@
+{
+  "name": "pic_list",
+  "version": "1.0.0",
+  "description": "- restful web 一切皆资源 DOM + CSS + JS URL Universal Resource Location",
+  "main": "index.js",
+  "scripts": {
+    "dev":"json-server --watch db.json --port 1314"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.15.1"
+  }
+}
