@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //函数声明整体变量提升
+        //变量      声明提升
+
+        //任何变量如果未经过声明就赋值，此变量就会成为全局变量
+        //一切声明的全局变量，都归window所有
+        // function fn(a){
+        //     console.log(a)
+        //     var a=123
+        //     console.log(a)
+        //     function a(){}
+        //     console.log(a)
+        //     var b=function(){}
+        //     console.log(b)
+        //     function d(){}
+        // }
+        // fn(1)
+        // function test(a,b){
+        //     console.log(a)     //1
+        //     c=0;
+        //     var c;
+        //     a=3;
+        //     b=2
+        //     console.log(b)        //2
+        //     function b(){}
+        //     function d(){}
+        //     console.log(b)         //2
+        // }
+        // AO {
+        //     a:1
+        //     b:function (){}
+        //     c:undefined
+        //     d:function (){}
+        // }
+        //test(1)
+        global = 100 
+        function fn(){
+            console.log(global)
+            global =200
+            console.log(global)
+            var global =300
+        }
+        fn()
+        var global
+
+
+        
+    </script>
+</body>
+</html>
