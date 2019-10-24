@@ -29,17 +29,16 @@
         //     c=0;
         //     var c;
         //     a=3;
-        //     b=2
         //     console.log(b)        //2
         //     function b(){}
         //     function d(){}
         //     console.log(b)         //2
         // }
         // AO {
-        //     a:1
-        //     b:function (){}
-        //     c:undefined
-        //     d:function (){}
+        //     a: undefined 1 3
+        //     b: undefined function(){}
+        //     c: undefined 0
+        //     d: function (){}
         // }
         //test(1)
         global = 100 
@@ -50,6 +49,7 @@
             var global =300
         }
         fn()
+        console.log(global)
         var global
 
 

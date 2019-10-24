@@ -15,6 +15,6 @@ AO={
 3. 在函数体里找函数声明，将函数名作为GO对象的属性名，值赋予函数体
 
 GO={
-    global:undefined
-    fn():
+    global:undefined  100
+    fn():function fn(){}
 }
