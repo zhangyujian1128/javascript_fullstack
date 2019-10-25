@@ -1,3 +1,4 @@
+//面向对象
 const width=200,height=40;
 
 class Gcode{
@@ -50,7 +51,10 @@ class Gcode{
     }
 }
 //实例
-let obj=new Gcode('screen');
+let obj1=new Gcode('screen');
+let obj2=new Gcode('screen1');
+let obj3=new Gcode('screen2');
+
 
 
 

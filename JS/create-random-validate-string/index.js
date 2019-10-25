@@ -1,3 +1,4 @@
+//面向过程
 const canvas=document.getElementById('screen');
 const ctx=canvas.getContext('2d');
 const width=200,height=50;
@@ -32,7 +33,7 @@ function drawText(){
         const idx =Math.floor(Math.random()*sourceText.length);
         result.push(sourceText[idx]);
         //删除
-        sourceText.splice(idx,1);
+        sourceText.splice(idx,1);  //？？？
     }
     console.log('result',result);
     for(let i=0;i<result.length;i++){
