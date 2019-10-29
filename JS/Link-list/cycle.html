@@ -21,10 +21,21 @@
         * @return {boolean}
         */
        var hasCycle = function(head) {
+           let map=new Map();
            let current =head;
            while(current){
-
-               current=current.next;
+            //     if(map.has(current)){
+            //         return true
+            //     }else{
+            //         map.set(current,'123');
+            //     }
+            //    current=current.next;
+            if(current._hasVisited){
+                return true;
+            }else{
+                current._hasVisited =true;
+            }
+            current=current.next;
            }
            return false;
        };
