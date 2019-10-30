@@ -1,2 +1,2 @@
-const box=document.getElementById('box');
-box.style.fontSize='50px'
+const box=document.getElementById('box')
+box.style.fontSize='100px'
