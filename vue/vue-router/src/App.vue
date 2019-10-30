@@ -1,6 +1,13 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
+    <router-link to="/">首页</router-link>
+    <router-link to="/mine">我的</router-link>
+    <router-link to="/detail">详情</router-link>
+    <router-link to="/mine/mine2">我的页面的子界面</router-link>
+
+
+
     <router-view/>
   </div>
 </template>
