@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/match/match",
+    "pages/data/data"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "black",
+    "navigationBarBackgroundColor": "#008000",
+    "navigationBarTitleText": "懂球帝",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color":"#b7b7b7",
+    "selectedColor":"#008000",
+    "borderStyle": "black",
+    "backgroundColor":"f5f5f5",
+    "selectedindex":1,
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./image/firstPage1.png",
+        "selectedIconPath": "./image/firstPage2.png"
+      },
+      {
+        "pagePath": "pages/match/match",
+        "text": "比赛",
+        "iconPath": "./image/match1.png",
+        "selectedIconPath": "./image/match2.png"
+      },
+      {
+        "pagePath": "pages/data/data",
+        "text": "数据",
+        "iconPath": "./image/data1.png",
+        "selectedIconPath": "./image/data2.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
