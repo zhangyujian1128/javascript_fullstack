@@ -4,17 +4,13 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    list:[
+      { name: '转会', id: ''},
+      { name: '头条', id: '' },
+      { name: '热门', id: '' }
+    ]
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
+  
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({

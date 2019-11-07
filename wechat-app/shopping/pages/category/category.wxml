@@ -2,11 +2,14 @@
 <!-- pages/category/category.wxml -->
 <view class="main">
   <view class="category-left">
-    <view wx:for="{{category}}" wx:key="{{item.id}}" data-id="{{item.id}}" data-index="{{index}}" class="cate-list {{curIndex === index ? 'on' : ''}}" bindtap="switchTab">
+    <view wx:for="{{category}}" wx:key="{{item.id}}" data-id="{{item.id}}" 
+    data-index="{{index}}" class="cate-list {{curIndex === index ? 'on' : ''}}" 
+    bindtap="switchTab">
       {{item.name}}
     </view>
   </view>
-  <scroll-view class="category-right" scroll-y="{{true}}" scroll-with-animation="{{true}}" scroll-into-view="{{toView}}">
+  <scroll-view class="category-right" scroll-y="{{true}}" scroll-with-animation="{{true}}"
+   scroll-into-view="{{toView}}">
     <block wx:for="{{detail}}" wx:key="{{item.id}}">
       <view class="cate-box" id="{{item.id}}">
         <view class="cate-banner">

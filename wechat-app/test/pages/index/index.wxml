@@ -1,4 +1,15 @@
 <!--index.wxml-->
-<view class="container">
-  
+<view class="firstPage">
+  <view class="firstPage-top">
+    <view class="top 1">转会</view>
+    <view class="top 2">头条</view>
+    <view class="top 3">热门</view>   
+  </view>
+
+  <view class="firstPage-swiper"></view>
+
+  <view class="firstPage-match"></view>
+
+  <view class="firstPage-news"></view>
+
 </view>
