@@ -61,6 +61,20 @@
                 fn1(fn2(fn3(params)))
             }
         }
+
+        function myCompose(...fns){
+            console.log(fns);
+            return function(arg){
+                let res = fns.pop()(arg);
+                while (fns.length) {
+                    let fn = fns.pop();
+                    res = fn(res);
+                }
+                return res;
+            }
+        }
+        var ffff = myCompose(append,SetRedColor,setInnerHtml);
+        ffff(document.createElement('div'));
     </script>
 </body>
 </html>
