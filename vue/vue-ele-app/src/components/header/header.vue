@@ -45,7 +45,7 @@
                             <div class="line"></div>
                         </div>
                         <ul class="supports">
-                            <li class="support-item" v-for="(item,index) in seller.supports" :key="index">
+                            <li class="support-item" v-for="(item, index) in seller.supports" :key="index">
                                 <span class="icon" :class="classMap[item.type]"></span>
                                 <span class="text">{{item.description}}</span>
                             </li>
@@ -253,8 +253,6 @@ export default {
                         padding 0 12px
                         margin-bottom 12px
                         font-size 0
-                    &:last-child 
-                        margin-bottom 0
                         .icon 
                             display inline-block
                             width 16px

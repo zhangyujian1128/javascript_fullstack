@@ -1,15 +1,15 @@
 .firstPage{
-  height: 100%;
+  width: 100%;
 }
 .firstPage-top{
-  float: inline-block;
+  display: flex;
   height: 60rpx;
-  width: 100%;
+  width: flex;
   border-bottom: 1px solid #ddd;
-  box-sizing: border-box;
 }
 .top{
-  width: 33%;
+  width: 20%;
   text-align: center;
   font-size: 30rpx;
+  margin: auto;
 }

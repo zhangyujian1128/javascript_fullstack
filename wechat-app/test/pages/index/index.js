@@ -8,6 +8,12 @@ Page({
       { name: '转会', id: ''},
       { name: '头条', id: '' },
       { name: '热门', id: '' }
+    ],
+    imgUrls:[
+      '/image/data1.png',
+      '/image/data2.png',
+      '/image/match1.png',
+      '/image/match2.png',
     ]
   },
   

@@ -35,10 +35,10 @@ export default {
             console.log(res)
             if(res.data.errno === 0){
               // this.seller =res.data.data
-              this.seller = Object.assign({},this.seller,res.data.data)     //合并对象数据 Object.assign方法
-            }
-        })
-    }
+            this.seller = Object.assign({}, this.seller, res.data.data)
+        }
+      })
+  }
 }
 </script>
 

@@ -10,7 +10,6 @@ Vue.prototype.$http = axios
 
 import './common/stylus/index.styl'
 
-
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
