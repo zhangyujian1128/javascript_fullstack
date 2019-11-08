@@ -8,7 +8,7 @@
 //     }
 //     return target
 // }
-//深拷贝
+//深拷贝    基础数据类型是深拷贝
 // function cloneDeep(source){
 //     if(typeof source !== 'object'){return source}
 //     var target = Array.isArray(source)?[]:{}
