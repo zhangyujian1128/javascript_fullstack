@@ -31,12 +31,18 @@
                                         <span class="now">￥{{food.price}}</span>
                                         <span class="old" v-if="food.oldPrice">￥{{food.oldPrice}}</span>
                                     </div>
+                                    <div class="cartcontrol-wrapper">
+                                        <!-- + -->
+                                        <cartcontrol :food="food" @add="addFood"></cartcontrol>
+                                    </div>
                                 </div>
                             </li>
                         </ul>
                     </li>
                 </ul>
             </div>
+            <shopcart :selectFoods = "selectFoods" :deliveryPrice = "seller.deliveryPrice" :minPrice = "seller.minPrice">
+            </shopcart>
         </div>
     </div>
 </template>
@@ -45,8 +51,14 @@
   <script>
         import BScroll from 'better-scroll'
         import shopcart from '@/components/shopcart/shopcart'
+        import cartcontrol from '@/components/cartcontrol/cartcontrol'
         export default {
             name:'Goods',
+            props: {
+                seller: {
+                    type: Object
+                }
+            },
             data(){
                 return{
                     goods:[1,2,3,4,5,6,7,8,9],
@@ -56,7 +68,8 @@
                 }
             },
             components:{
-                shopcart
+                shopcart,
+                cartcontrol
             },
             created (){
                 this.$http.get('http://localhost:8080/static/goods.json')
@@ -81,6 +94,19 @@
                         }
                     }
                     return 0
+                },
+                selectFoods(){
+                    let foods = [];
+                    for (let good of this.goods) {
+                        if (good.foods) {
+                        for (let food of good.foods) {
+                            if (food.count) {
+                            foods.push(food)
+                            }
+                        }
+                        }
+                    }
+                    return foods
                 }
             },
             methods:{
@@ -113,6 +139,9 @@
                         height += item.clientHeight
                         this.listHeight.push(height)
                     }
+                },
+                addFood(){
+
                 }
             }
         }
