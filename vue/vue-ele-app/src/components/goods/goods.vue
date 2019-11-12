@@ -119,7 +119,6 @@
                         probeType:3
                     })
                     this.foodsScroll.on("scroll",pos=>{
-                         console.log(pos)
                         this.scrollY = Math.abs(Math.round(pos.y))
                     })
                 },
