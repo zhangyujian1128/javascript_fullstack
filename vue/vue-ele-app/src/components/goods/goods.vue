@@ -3,7 +3,7 @@
         <div class="goods">
             <div class="menu-wrapper" ref="menuWrapper">
                 <ul>
-                    <li v-for="(item,index) in goods" :key="index" class="menu-item" @click="selectMenu(index)" :class="{'current':currentIndex === index}">
+                    <li v-for="(item, index) in goods" :key="index" class="menu-item" @click="selectMenu(index)" :class="{'current':currentIndex === index}">
                         <span class="text border-1px">
                             <span v-if="item.type >0" class="icon" :class="classMap[item.type]"></span>
                             {{item.name}}
@@ -13,7 +13,7 @@
             </div>
             <div class="foods-wrapper" ref="foodsWrapper">
                 <ul>
-                    <li class="food-list" v-for="(item,index) in goods" :key="index" ref="foodList">
+                    <li class="food-list" v-for="(item, index) in goods" :key="index" ref="foodList">
                         <h1 class="title">{{item.name}}</h1>
                         <ul>
                             <li class="food-item border-1px" v-for="(food, index) in item.foods" :key="index">
@@ -32,7 +32,7 @@
                                         <span class="old" v-if="food.oldPrice">￥{{food.oldPrice}}</span>
                                     </div>
                                     <div class="cartcontrol-wrapper">
-                                        <!-- + -->
+                                        <!-- +- -->
                                         <cartcontrol :food="food" @add="addFood"></cartcontrol>
                                     </div>
                                 </div>
@@ -99,11 +99,11 @@
                     let foods = [];
                     for (let good of this.goods) {
                         if (good.foods) {
-                        for (let food of good.foods) {
-                            if (food.count) {
-                            foods.push(food)
+                            for (let food of good.foods) {
+                                if (food.count) {
+                                foods.push(food)
+                                }
                             }
-                        }
                         }
                     }
                     return foods

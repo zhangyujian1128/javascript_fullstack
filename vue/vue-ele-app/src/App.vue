@@ -7,7 +7,7 @@
           <router-link to="/goods">商品</router-link>
         </div>
         <div class="tab-item">
-          <router-link to="/ratings">评价</router-link>
+          <router-link to="/rating">评价</router-link>
         </div>
         <div class="tab-item">
           <router-link to="/seller">商家</router-link>
@@ -34,8 +34,8 @@ export default {
         .then((res)=>{
             console.log(res)
             if(res.data.errno === 0){
-              // this.seller =res.data.data
-            this.seller = Object.assign({}, this.seller, res.data.data)
+          // this.seller =res.data.data
+          this.seller = Object.assign({}, this.seller, res.data.data)
         }
       })
   }
