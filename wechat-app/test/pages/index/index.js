@@ -10,7 +10,8 @@ Page({
       { name: '热门', id: '' },
       { name: '西甲', id: '' },
       { name: '欧冠', id: '' },
-      { name: '深度', id: '' }
+      { name: '深度', id: '' },
+      { name: '闲情', id: '' }
     ],
     imgUrls:[
       '/image/swiper1.jpg',
