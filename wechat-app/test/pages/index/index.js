@@ -7,13 +7,16 @@ Page({
     list:[
       { name: '转会', id: ''},
       { name: '头条', id: '' },
-      { name: '热门', id: '' }
+      { name: '热门', id: '' },
+      { name: '西甲', id: '' },
+      { name: '欧冠', id: '' },
+      { name: '深度', id: '' }
     ],
     imgUrls:[
-      '/image/data1.png',
-      '/image/data2.png',
-      '/image/match1.png',
-      '/image/match2.png',
+      '/image/swiper1.jpg',
+      '/image/swiper2.jpg',
+      '/image/swiper3.jpg',
+      '/image/swiper4.jpeg'
     ]
   },
   
