@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import axios from "axios"; 
+import axios from "axios";
 import Header from './Header';
 import Swiper from './Swiper';
 export default {
