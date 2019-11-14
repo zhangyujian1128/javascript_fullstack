@@ -15,6 +15,9 @@
       <block wx:for="{{imgUrls}}" wx:key="{{index}}">
         <swiper-item>
           <image class="slide-image" src="{{item}}"/>
+          <view>
+            <view class="imageTitle">123456</view>
+          </view>
         </swiper-item>
       </block>
     </swiper>

@@ -1,5 +1,5 @@
 /* pages/index/index.wxss */
-swiper{
+  swiper{
     height: 421.5rpx;
   }
   swiper-item image{
