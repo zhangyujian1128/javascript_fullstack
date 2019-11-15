@@ -20,6 +20,9 @@ export default {
         send(){
             this.$emit('xiaoxi',this.cmsg)
         }
+    },
+    mounted:{
+        
     }
 }
 </script>

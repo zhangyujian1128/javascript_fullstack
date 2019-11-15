@@ -1,7 +1,7 @@
 <template>
   <div class="container">
       <h2>父组件</h2>
-      <div>{{xinxiaoxi}}</div>
+      <div class="red">{{xinxiaoxi}}</div>
     <v-child v-bind:cjieshou="fmsg" v-on:xiaoxi="fjieshou"></v-child>
   </div>
  
@@ -28,5 +28,7 @@ export default {
 </script>
 
 <style>
-
+.red{
+    background-color: red;
+}
 </style>
