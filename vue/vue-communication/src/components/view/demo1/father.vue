@@ -1,6 +1,6 @@
 <template>
   <div class="contanier">
-  <child v-bind:send-msg="myMsg"></child>
+  <child v-bind:sendMsg="myMsg"></child>
   </div>
 </template>
 

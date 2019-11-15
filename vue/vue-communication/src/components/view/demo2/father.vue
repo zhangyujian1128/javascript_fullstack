@@ -5,7 +5,7 @@
               <li v-for="item in myObj" :key="item.id">{{item.name}}</li>
           </ul>
       </div> -->
-    <child :send-msg="myMsg" :send-num="myNum" :send-obj="myObj"></child>
+    <child :sendMsg="myMsg" :send-num="myNum" :send-obj="myObj"></child>
   </div>
 </template>
 

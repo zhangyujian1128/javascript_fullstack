@@ -14,7 +14,9 @@
 
 <script>
 export default {
-    props:['sendMsg'],
+    props:[
+        'sendMsg'
+        ],
     computed: {
         changeMsg (){
             return this.sendMsg.toUpperCase()
