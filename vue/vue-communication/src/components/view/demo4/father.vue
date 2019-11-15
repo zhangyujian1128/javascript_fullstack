@@ -1,34 +1,31 @@
 <template>
-  <div class="container">
-      <h2>父组件</h2>
-      <div class="red">{{xinxiaoxi}}</div>
-    <v-child v-bind:cjieshou="fmsg" v-on:xiaoxi="fjieshou"></v-child>
-  </div>
- 
+    <div class="container">
+        <h2>父组件</h2>
+        <!-- <child1 :title="oTitle"></child1>
+        <child2 @test="getTitle"></child2> -->
+        <child1></child1>
+        <child2></child2>
+    </div>
 </template>
 
 <script>
-import child from './child'
+import child1 from './child1'
+import child2 from './child2'
 export default {
     components: {
-        'v-child':child
+        child1,
+        child2
     },
     data(){
         return{
-            fmsg:'这是父组件的信息',
-            xinxiaoxi:''
         }
     },
     methods:{
-        fjieshou(e){
-            this.xinxiaoxi = e;
-        }
+
     }
 }
 </script>
 
 <style>
-.red{
-    background-color: red;
-}
+
 </style>
