@@ -5,13 +5,13 @@ const app = getApp()
 Page({
   data: {
     list:[
-      { name: '转会', id: ''},
-      { name: '头条', id: '' },
-      { name: '热门', id: '' },
-      { name: '西甲', id: '' },
-      { name: '欧冠', id: '' },
-      { name: '深度', id: '' },
-      { name: '闲情', id: '' }
+      { name: '转会', id: '0'},
+      { name: '头条', id: '1' },
+      { name: '热门', id: '2' },
+      { name: '西甲', id: '3' },
+      { name: '欧冠', id: '4' },
+      { name: '深度', id: '5' },
+      { name: '闲情', id: '6' }
     ],
     imgUrls:[
       '/image/swiper1.jpg',

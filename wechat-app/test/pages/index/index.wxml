@@ -1,13 +1,13 @@
 <!--index.wxml-->
 <view class="firstPage">
   <scroll-view scroll-x="true" class="firstPage-top">
-      <view class="top 1">转会</view>
-      <view class="top 2">头条</view>
-      <view class="top 3">热门</view>
-      <view class="top 4">西甲</view>
-      <view class="top 5">欧冠</view>
-      <view class="top 6">深度</view>
-      <view class="top 6">闲情</view>
+      <view class="top">123</view>
+      <view class="top">123</view>
+      <view class="top">123</view>
+      <view class="top">123</view>
+      <view class="top">123</view>
+      <view class="top">123</view>
+      <view class="top">123</view>
   </scroll-view>
 
   <view class="firstPage-swiper">
@@ -15,9 +15,7 @@
       <block wx:for="{{imgUrls}}" wx:key="{{index}}">
         <swiper-item>
           <image class="slide-image" src="{{item}}"/>
-          <view>
-            <view class="imageTitle">123456</view>
-          </view>
+          <text class="imageTitle">123456</text>
         </swiper-item>
       </block>
     </swiper>
