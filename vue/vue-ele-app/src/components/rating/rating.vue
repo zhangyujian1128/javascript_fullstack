@@ -1,5 +1,12 @@
 <template>
-  <h1>123</h1>
+<div>
+  <div class="rating">
+    <div class="rating-content">
+      <div class="rating-top"></div>
+      <div class="rating"></div>
+    </div>
+  </div>
+</div>
 </template>
 
 <script>
