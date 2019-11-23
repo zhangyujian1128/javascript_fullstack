@@ -4,7 +4,7 @@
           <v-search-box @query="onQueryChange" ref="searchBox"></v-search-box>
       </div>
       <!-- 热门搜索和搜索历史 -->
-      <div class="shortcut-wrapper">
+      <div class="shortcut-wrapper" v-show="!query">
           <v-scroll class="shortcut" :data="shortcut" ref="shortcut">
               <div>
                   <!-- 热门搜索 -->
@@ -31,8 +31,8 @@
           </v-scroll>
       </div>
       <!-- result -->
-      <div class="search-result">
-          <v-suggest :query="query"></v-suggest>
+      <div class="search-result" v-show="query">
+          <v-suggest :query="query" @select="saveSearch" @listScroll="blurInput" ref="suggest"></v-suggest>
       </div>
   </div>
 </template>
@@ -123,6 +123,9 @@ export default {
                     .icon
                         font-size 18px
                         color hsla(0, 0%, 100%, 0.3)
-    
-
+    .search-result
+        position fixed
+        width 100%
+        top px2rem(360px)
+        bottom 0
 </style>
