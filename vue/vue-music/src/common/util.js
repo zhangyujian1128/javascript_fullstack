@@ -1,3 +1,4 @@
+//功能函数
 export function debounce (func,delay){
     let timer
     return function(...args){

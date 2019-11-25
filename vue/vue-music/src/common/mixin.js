@@ -1,3 +1,4 @@
+//vuex仓库里的mapActions,mapGetters
 import { mapActions, mapGetters } from 'vuex'
 
 export const searchMixin ={
