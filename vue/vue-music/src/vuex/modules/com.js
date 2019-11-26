@@ -3,7 +3,7 @@ const state = {
     showSidebar: false,
     searchHistory: ['123','dada']
 }
-
+//方法
 const mutations = {
     [types.COM_SHOW_SIDE_BAR] (state,status){
         state.showSidebar = status
@@ -34,9 +34,8 @@ const actions = {
     clearSearchHistory({commit}, status){
         commit(types.COM_CLEAR_SEARCH_HISTORY,status)
     }
-
 }
-
+//计算属性
 const getters = {
     showSidebar: state =>state.showSidebar,
     searchHistory: state =>state.searchHistory
