@@ -3,7 +3,7 @@ const state = {
     showSidebar: false,
     searchHistory: ['123','dada']
 }
-//方法
+//方法 必须同步方法
 const mutations = {
     [types.COM_SHOW_SIDE_BAR] (state,status){
         state.showSidebar = status
@@ -18,7 +18,7 @@ const mutations = {
         state.searchHistory =[]
     }
 }
-
+// 将mutations里的方法通过actions转化成异步方法，再放到外面调用
 const actions = {
     setShowSidebar({commit}, status){
         commit(types.COM_SHOW_SIDE_BAR, status)

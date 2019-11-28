@@ -3,14 +3,14 @@
     <!-- 头部 -->
     <v-header>
       <i class="icon" slot="left-icon">&#xe692;</i>
-      <span slot="content">我的音乐</span>
+      <span slot="content">网易云音乐</span>
       <router-link to="/user" slot="right-icon">
         <i class="icon">&#xe63c;</i>
       </router-link>
     </v-header>
+    <v-sidebar></v-sidebar>
     <!-- tab -->
     <v-tab></v-tab>
-    <v-sidebar></v-sidebar>
     <v-play></v-play>
     <router-view/>
   </div>

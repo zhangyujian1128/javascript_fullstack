@@ -56,12 +56,10 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters,mapActions } from 'vuex'
 export default {
-  
   data(){
       return{
-          
       }
   },
   computed:{
@@ -70,8 +68,11 @@ export default {
       ])
   },
   methods: {
+    ...mapActions([
+      'setShowSidebar'
+    ]),
     _hidebar() {
-        this.$store.dispatch('setShowSidebar',false)
+        this.setShowSidebar(false)
     }
   },
 };

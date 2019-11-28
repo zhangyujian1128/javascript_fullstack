@@ -13,6 +13,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 export default {
     name:'hd',
     data(){
@@ -21,8 +22,13 @@ export default {
         }
     },
     methods:{
+        ...mapActions([
+            'setShowSidebar'
+        ]),
         leftEvent(){
-            this.$store.dispatch('setShowSidebar',true)
+            //dispatch直接调用store里的actions方法
+            // this.$store.dispatch('setShowSidebar',true)
+            this.setShowSidebar(true);
         }
     }
 }
