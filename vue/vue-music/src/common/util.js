@@ -6,7 +6,7 @@ export function debounce (func,delay){
             clearTimeout(timer)
         }
        timer = setTimeout(()=>{
-            func.apply(this,args)
+            func.apply(this,args)          //apply(this):绑定this以防func里的this作用域被修改
         },delay)
     }
 }

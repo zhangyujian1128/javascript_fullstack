@@ -21,8 +21,8 @@ export default {
         }
     },
     created(){
-        this.$watch('query',debounce((newQuery)=>{
-            this.$emit('query',newQuery)
+        this.$watch('query',debounce((newQuery) =>{           //监听query字段，发生改变执行防抖属性修饰后的方法函数
+            this.$emit('query',newQuery)                     //以query为方法名携带新的query值(newQuery)抛出交给search.vue作接口请求
         },300))
     },
     methods:{
