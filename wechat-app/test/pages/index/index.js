@@ -13,14 +13,14 @@ Page({
       { name: '深度', id: '5' },
       { name: '闲情', id: '6' }
     ],
-    imgUrls:[
-      '/image/swiper1.jpg',
-      '/image/swiper2.jpg',
-      '/image/swiper3.jpg',
-      '/image/swiper4.jpeg'
-    ]
+    current: 0,
+    msgList: [
+        { url: "/image/swiper1.jpg", title: "今夜，巴塞罗那登上了欧洲之巅！" },
+        { url: "/image/swiper2.jpg", title: "梅西继续领跑射手榜" },
+        { url: "/image/swiper3.jpg", title: "“MSG”组合火力全开各入一球，巴塞罗那继续领跑积分榜第一名" },
+        { url: "/image/swiper4.jpeg", title: "C罗陷入球荒，各项赛事六轮不进" }
+      ]
   },
-  
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({

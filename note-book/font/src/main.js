@@ -16,8 +16,6 @@ Vue.config.productionTip = false
 
 router.beforeEach((to, from, next) =>{  //路由首位
   document.title = to.meta.title
-  console.log(from)
-  console.log(to)
   next()
 })
 

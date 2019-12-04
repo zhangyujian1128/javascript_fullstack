@@ -49,9 +49,12 @@ export default {
                     userpwd: this.userpwd.trim()
                 }
             })
-            .then(res =>{
-
+            .then((res) =>{
+              
             })
+        },
+        login(){
+
         }
     }
 };

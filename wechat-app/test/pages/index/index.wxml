@@ -1,28 +1,22 @@
-<!--index.wxml-->
+<!-- index.wxml -->
 <view class="firstPage">
+  
   <scroll-view scroll-x="true" class="firstPage-top">
-      <view class="top">123</view>
-      <view class="top">123</view>
-      <view class="top">123</view>
-      <view class="top">123</view>
-      <view class="top">123</view>
-      <view class="top">123</view>
-      <view class="top">123</view>
+    <view class="top" wx:for="{{list}}" wx:key="{{index}}">{{item.name}}</view>
   </scroll-view>
 
-  <view class="firstPage-swiper">
-    <swiper indicator-dots="true" indicator-color="black" indicator-active-color="green" autoplay="true" duration="800" interval="3000" circular="true">
-      <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+  <swiper class="swiper-container" horizontal="true"
+  indicator-dots="true" indicator-active-color="green"
+   autoplay="true" interval="3000" duration="800">
+    <block wx:for="{{msgList}}" wx:key="{{index}}">
+      <navigator>
         <swiper-item>
-          <image class="slide-image" src="{{item}}"/>
-          <text class="imageTitle">123456</text>
+          <image class="slide-image" src="{{item.url}}" />
+          <view class="swiper-title">{{item.title}}</view>
         </swiper-item>
-      </block>
-    </swiper>
-  </view>
-
+      </navigator>
+    </block>
+  </swiper>
   <view class="firstPage-match"></view>
-
   <view class="firstPage-news"></view>
-
 </view>

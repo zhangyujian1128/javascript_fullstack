@@ -29,7 +29,7 @@ export default {
     Login() {
       if(this.username.trim() === '' && this.userpwd.trim() === '') {
         this.$toast('账号或密码不能为空')
-        return  
+        return
       }
       this.$http({
         method:'post',

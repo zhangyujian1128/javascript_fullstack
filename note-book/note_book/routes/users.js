@@ -25,7 +25,7 @@ router.post('/userLogin', async(ctx, next) => {
   await userServies.userLogin(_username, _userpwd)
   .then((res) => {
     let r = '';
-    // console.log(res)
+    console.log(res)
     if (res.length) {
       r = 'ok';
       let result = {
@@ -54,5 +54,7 @@ router.post('/userLogin', async(ctx, next) => {
     }
   })
 })
+
+router.post('/userRegister')
 
 module.exports = router

@@ -5,6 +5,7 @@
     <block wx:for="{{imgUrls}}" wx:key="{{index}}">
       <swiper-item>
         <image class="slide-image" src="{{item}}" width="100%" />
+        
       </swiper-item>
     </block>
   </swiper>
