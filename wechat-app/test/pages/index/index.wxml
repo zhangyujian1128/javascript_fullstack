@@ -1,8 +1,18 @@
 <!-- index.wxml -->
 <view class="firstPage">
+
+  <view class="search">
+    <view class="input-father">
+      <image class="fangdajing" src="../../image/fangdajing.png" />
+      <input class="input" type="text" placeholder="{{inputValue}}" />
+      <image class="clear" src="../../image/cha.png" />  
+    </view>
+  </view>
   
+
   <scroll-view scroll-x="true" class="firstPage-top">
-    <view class="top" wx:for="{{list}}" wx:key="{{index}}">{{item.name}}</view>
+    <view bindtap = "clicktop" wx:for="{{list}}" wx:key="{{item.id}}" data-id="{{item.id}}" data-index="{{index}}"
+     class="top {{current === item.id ? 'on' : ''}}">{{item.name}}</view>
   </scroll-view>
 
   <swiper class="swiper-container" horizontal="true"
@@ -17,6 +27,7 @@
       </navigator>
     </block>
   </swiper>
+
   <view class="firstPage-match"></view>
   <view class="firstPage-news"></view>
 </view>

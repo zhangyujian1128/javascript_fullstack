@@ -5,21 +5,29 @@ const app = getApp()
 Page({
   data: {
     list:[
-      { name: '转会', id: '0'},
-      { name: '头条', id: '1' },
-      { name: '热门', id: '2' },
-      { name: '西甲', id: '3' },
-      { name: '欧冠', id: '4' },
-      { name: '深度', id: '5' },
-      { name: '闲情', id: '6' }
+      { name: '转会', id: 'zhuanhui' },
+      { name: '头条', id: 'toutiao' },
+      { name: '热门', id: 'remen' },
+      { name: '西甲', id: 'xijia' },
+      { name: '欧冠', id: 'ouguan' },
+      { name: '深度', id: 'shendu' },
+      { name: '英超', id: 'yingchao' },
+      { name: '闲情', id: 'xianqiang' }
     ],
-    current: 0,
+    inputValue: '梅西金球奖专访',
+    current: 'toutiao',
     msgList: [
         { url: "/image/swiper1.jpg", title: "今夜，巴塞罗那登上了欧洲之巅！" },
         { url: "/image/swiper2.jpg", title: "梅西继续领跑射手榜" },
         { url: "/image/swiper3.jpg", title: "“MSG”组合火力全开各入一球，巴塞罗那继续领跑积分榜第一名" },
         { url: "/image/swiper4.jpeg", title: "C罗陷入球荒，各项赛事六轮不进" }
       ]
+  },
+  clicktop(e){
+    console.log(e)
+    this.setData({
+      current: e.currentTarget.dataset.id
+    })
   },
   onLoad: function () {
     if (app.globalData.userInfo) {
