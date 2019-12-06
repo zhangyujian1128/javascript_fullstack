@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(){
+            this.age =30;
+        }
+
+        Person.prototype.say = function() {}
+        var p = new Person();
+        console.log(p)
+        // console.log(p.__proto__ === Person.prototype); 
+        //实例的 __proto__ 等于类的 prototype
+        // console.log(Person.prototype.constructor === Person);
+        // console.log(p.__proto__.constructor === Person);
+
+        function Student(){}
+        
+        Student.prototype.__pro__ = Person.prototype;
+        var s =new Student();
+    </script>
+</body>
+</html>

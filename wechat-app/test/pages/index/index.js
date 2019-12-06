@@ -14,8 +14,12 @@ Page({
       { name: '英超', id: 'yingchao' },
       { name: '闲情', id: 'xianqiang' }
     ],
-    inputValue: '梅西金球奖专访',
+    match:[
+
+    ],
+    hotsearch: '梅西金球奖专访',
     current: 'toutiao',
+    inputquery: '',
     msgList: [
         { url: "/image/swiper1.jpg", title: "今夜，巴塞罗那登上了欧洲之巅！" },
         { url: "/image/swiper2.jpg", title: "梅西继续领跑射手榜" },
@@ -24,9 +28,20 @@ Page({
       ]
   },
   clicktop(e){
-    console.log(e)
     this.setData({
       current: e.currentTarget.dataset.id
+    })
+  },
+  getinput(e){
+    console.log(e)
+    this.setData({
+      inputquery: e.detail.value
+    })
+  },
+  clearinput(e){
+    console.log(e)
+    this.setData({
+      inputquery: ''
     })
   },
   onLoad: function () {

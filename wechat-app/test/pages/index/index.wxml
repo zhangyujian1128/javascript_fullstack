@@ -4,8 +4,8 @@
   <view class="search">
     <view class="input-father">
       <image class="fangdajing" src="../../image/fangdajing.png" />
-      <input class="input" type="text" placeholder="{{inputValue}}" />
-      <image class="clear" src="../../image/cha.png" />  
+      <input class="input" bindinput="getinput" type="text" placeholder="{{hotsearch}}" value="{{inputquery}}"/>
+      <image class="clear {{inputquery === '' ? 'hide':''}}" bindtap = "clearinput" src="../../image/cha.png" />  
     </view>
   </view>
   
@@ -27,7 +27,26 @@
       </navigator>
     </block>
   </swiper>
+    
+  <view class="space">
+  </view>
+    
+  <view class="firstPage-match">
+    <view class="match-container">
+      <view class="left-team">
 
-  <view class="firstPage-match"></view>
+      </view>
+      <view class="match-infor">
+        1111
+      </view>
+      <view class="right-team">
+        bbbb
+      </view>
+    </view>
+  </view>
+
+  <view class="space">
+  </view>
+
   <view class="firstPage-news"></view>
 </view>

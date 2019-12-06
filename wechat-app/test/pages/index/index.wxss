@@ -9,6 +9,7 @@
 }
 .input-father{
   position: relative;
+  height: 60rpx;
   margin-left: 15px;
   margin-top: 5px;
   margin-right: 15px;
@@ -18,24 +19,27 @@
 }
 .fangdajing{
   position: absolute;
-  width: 30rpx;
-  height: 30rpx;
-  left: 10rpx;
-  top: 7rpx;
+  width: 40rpx;
+  height: 40rpx;
+  left: 12rpx;
+  top: 10rpx;
 }
 .input{
   position: relative;
-  width: 100%;
   text-align: left;
-  left: 50rpx;
-  width: 600rpx;
+  height: 60rpx;
+  left: 70rpx;
+  width: 560rpx;
 }
 .clear{
   position: absolute;
-  width: 35rpx;
-  height: 35rpx;
+  width: 40rpx;
+  height: 40rpx;
   right: 10rpx;
-  top: 4rpx;
+  top: 10rpx;
+}
+.hide{
+  display: none;
 }
 .firstPage-top{
   height: 68rpx;
@@ -78,5 +82,32 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+.space{
+  width: 100%;
+  height: 15rpx;
+  background-color: rgb(10, 10, 10);
+}
+
+.firstPage-match{
+  width: 100%;
+  height: 180rpx;
+  background-color: #fff;
+  position: relative;
+}
+.match-container{
+  margin: 0 20rpx 0 20rpx;
+  height: 100%;
+  display: flex;
+}
+.left-team{
+  width: 200rpx;
+}
+.match-infor{
+  flex: 1;
+}
+.right-team{
+  width: 200rpx;
+}
+
 
 
