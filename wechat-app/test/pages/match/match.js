@@ -1,19 +1,48 @@
 // pages/match/match.js
 Page({
-
+  onLoad() {
+    var that = this;
+    wx.getSystemInfo({
+      success: function (res) {
+        that.setData({
+          clientHeight: res.windowHeight
+        });
+      }
+    })
+  },
   /**
    * 页面的初始数据
    */
   data: {
-
+    winWidth: 0,
+    winHeight: 0,
+    // tab切换
+    currentTab: 0,
+    order: [],
+    orderlist: {},
+  },
+  bindChange: function (e) {
+    console.log("滑动切换会触发的事件")
+    var that = this;
+    that.setData({
+      currentTab: e.detail.current
+    });
+  },
+  swichNav: function (e) {
+    console.log("点击上方选项卡触发的事件")
+    var that = this;
+    if (this.data.currentTab === e.target.dataset.current) {
+      return false;
+    } else {
+      that.setData({
+        currentTab: e.target.dataset.current
+      })
+    }
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
-  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

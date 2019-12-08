@@ -1,4 +1,4 @@
-<!-- index.wxml -->
+<!-- 首页 -->
 <view class="firstPage">
 
   <view class="search">
@@ -34,19 +34,22 @@
   <view class="firstPage-match">
     <view class="match-container">
       <view class="left-team">
-
+        <image class="team-img" src="../../image/left-team.jpg" />
+        <span class="team-name">巴塞罗那</span>
       </view>
       <view class="match-infor">
-        1111
+        <span class="match-name">欧冠 半决赛次回合</span>
+        <span class="match-time">明日凌晨04:00</span>
+        <span class="match-pointed">首回合3-2</span>
+        <span class="match-tv">CCTV5</span>
       </view>
       <view class="right-team">
-        bbbb
+        <image class="team-img" src="../../image/right-team.jpg" />
+        <span class="team-name">皇家马德里</span>
       </view>
     </view>
   </view>
 
   <view class="space">
   </view>
-
-  <view class="firstPage-news"></view>
 </view>

@@ -1,2 +1,41 @@
-<!--pages/data/data.wxml-->
-<text>pages/data/data.wxml</text>
+<!-- 比赛数据 -->
+<view class='match-container'>
+  <view class='orderlength' >
+
+    <view class='protab swiper-tab'>
+      <view class="swiper-tab-item {{currentTab==0 ? 'active' : ''}}" data-current="0" bindtap="swichNav">销售中</view>
+      <view class="swiper-tab-item {{currentTab==1 ? 'active' : ''}}" data-current="1" bindtap="swichNav">审核中</view>
+      <view class="swiper-tab-item {{currentTab==2 ? 'active' : ''}}" data-current="2" bindtap="swichNav">已下架</view>
+    </view>
+
+    <view class='order-itembox'>
+      <swiper current="{{currentTab}}" class="swiper-box" duration="300" bindchange="bindChange" style="height: {{clientHeight?clientHeight+'px':'auto'}}">
+        
+        <swiper-item>
+          <scroll-view scroll-y="{{true}}" style="height: {{clientHeight?clientHeight+'px':'auto'}}">
+            <view class='order-item' wx:for="{{order}}" wx:for-item="item" wx:key="index" id='{{item.id}}'> 
+            <span>123456</span>
+            </view> 
+          </scroll-view>
+        </swiper-item>
+
+        <swiper-item>
+          <scroll-view scroll-y="{{true}}" style="height: {{clientHeight?clientHeight+'px':'auto'}}">
+            <view class='order-item' wx:for="{{order}}" wx:for-item="item" wx:key="index" wx:if="{{item.status==0}}">
+              第二个页面的数据
+            </view>
+          </scroll-view>
+        </swiper-item>
+
+        <swiper-item>
+          <scroll-view scroll-y="{{true}}" style="height: {{clientHeight?clientHeight+'px':'auto'}}">
+            <view class='order-item' wx:for="{{order}}" wx:for-item="item" wx:key="index" wx:if="{{item.status==1}}">
+              第三个页面的数据
+            </view>
+          </scroll-view>
+        </swiper-item>
+
+      </swiper>
+    </view>
+  </view>
+</view>

@@ -1,7 +1,7 @@
 <template>
   <div class="note-list">
       <ul>
-          <li v-for="(item, index) in noteList" :key="index">
+          <li v-for="(item, index) in noteList" :key="index" @click="noteDetail(item.id)">
               <div class="img">
                   <img :src="item.head_img" alt="">
               </div>
@@ -41,9 +41,12 @@ export default {
                 if(res.data.code === '200'){
                     this.noteList = res.data.data
                 }else{
-                    this.$toast(res.data.data)
+                    this.$toast(res.data.mess)
                 }
             })
+        },
+        noteDetail(id){
+            this.$router.push({ path: './noteDetail',query: {id: id}})
         }
     }
 }

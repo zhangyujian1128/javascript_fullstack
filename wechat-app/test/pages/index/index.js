@@ -33,7 +33,7 @@ Page({
     })
   },
   getinput(e){
-    console.log(e)
+    console.log(e.detail.value)
     this.setData({
       inputquery: e.detail.value
     })

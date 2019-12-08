@@ -1,5 +1,5 @@
 {
-  "name": "font",
+  "name": "vue-components",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "张裕建1128 <1191099069@qq.com>",
@@ -10,12 +10,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "amfe-flexible": "^2.2.1",
-    "axios": "^0.19.0",
-    "quill": "^1.3.7",
-    "vant": "^2.2.15",
     "vue": "^2.5.2",
-    "vue-quill-editor": "^3.0.6",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
@@ -35,8 +30,6 @@
     "file-loader": "^1.1.4",
     "friendly-errors-webpack-plugin": "^1.6.1",
     "html-webpack-plugin": "^2.30.1",
-    "less": "^3.10.3",
-    "less-loader": "^5.0.0",
     "node-notifier": "^5.1.2",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "ora": "^1.2.0",
