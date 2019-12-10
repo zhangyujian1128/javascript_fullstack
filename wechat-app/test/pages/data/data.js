@@ -1,28 +1,14 @@
 // pages/match/match.js
 Page({
-  onLoad() {
-    var that = this;
-    wx.getSystemInfo({
-      success: function (res) {
-        that.setData({
-          clientHeight: res.windowHeight
-        });
-      }
-    })
-  },
   /**
    * 页面的初始数据
    */
   data: {
-    winWidth: 0,
-    winHeight: 0,
-    // tab切换
-    currentTab: 0,
-    order: [],
-    orderlist: {},
+    currentTab: 0
   },
   bindChange: function (e) {
     console.log("滑动切换会触发的事件")
+    console.log(e)
     var that = this;
     that.setData({
       currentTab: e.detail.current
@@ -30,6 +16,7 @@ Page({
   },
   swichNav: function (e) {
     console.log("点击上方选项卡触发的事件")
+    console.log(e)
     var that = this;
     if (this.data.currentTab === e.target.dataset.current) {
       return false;
@@ -43,7 +30,16 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-
+  onLoad() {
+    var that = this;
+    wx.getSystemInfo({
+      success: function (res) {
+        that.setData({
+          clientHeight: res.windowHeight
+        });
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

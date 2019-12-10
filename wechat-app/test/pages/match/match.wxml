@@ -1,42 +1,43 @@
 <!-- 比赛 -->
-<view class='match-container'>
+<view class='container'>
   <view class='orderlength' >
 
-    <view class='protab swiper-tab'>
+    <view class='swiper-tab'>
       <view class="swiper-tab-item {{currentTab==0 ? 'active' : ''}}" data-current="0" bindtap="swichNav">销售中</view>
       <view class="swiper-tab-item {{currentTab==1 ? 'active' : ''}}" data-current="1" bindtap="swichNav">审核中</view>
       <view class="swiper-tab-item {{currentTab==2 ? 'active' : ''}}" data-current="2" bindtap="swichNav">已下架</view>
     </view>
 
     <view class='order-itembox'>
-      <swiper current="{{currentTab}}" class="swiper-box" duration="300"
-       bindchange="bindChange" style="height: {{clientHeight?clientHeight+'px':'auto'}}">
-        
-        <swiper-item>
-          <scroll-view scroll-y="{{true}}" style="height: {{clientHeight?clientHeight+'px':'auto'}}">
+      <swiper class="swiper-box" current="{{currentTab}}" duration="300" bindchange="bindChange">
+
+        <swiper-item class="swiper-item">
+          <scroll-view scroll-y="{{true}}">
             <view class='order-item'> 
-            <span>第1个页面的数据</span>
+             第一个页面的数据
             </view> 
           </scroll-view>
         </swiper-item>
 
-        <swiper-item>
-          <scroll-view scroll-y="{{true}}" style="height: {{clientHeight?clientHeight+'px':'auto'}}">
+        <swiper-item class="swiper-item">
+          <scroll-view scroll-y="{{true}}">
             <view class='order-item'>
-              <span>第2个页面的数据</span>
+              第二个页面的数据
             </view>
           </scroll-view>
         </swiper-item>
 
-        <swiper-item>
-          <scroll-view scroll-y="{{true}}" style="height: {{clientHeight?clientHeight+'px':'auto'}}">
+        <swiper-item class="swiper-item">
+          <scroll-view scroll-y="{{true}}">
             <view class='order-item'>
-              <span>第3个页面的数据</span>
+              第三个页面的数据
             </view>
           </scroll-view>
         </swiper-item>
 
       </swiper>
+      </view>
     </view>
-  </view>
+
 </view>
+  

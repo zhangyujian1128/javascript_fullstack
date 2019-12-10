@@ -62,6 +62,26 @@
   color: rgb(51, 219, 65);
   border-bottom: 5rpx solid rgb(117, 214, 122);
 }
+
+
+.order-itembox {
+  width: 100%;
+}
+.swiper-box{
+  width: 100%;
+}
+swiper-item{
+  width: 100%;
+}
+scoll-view{
+  width: 100%;
+}
+.order-item{
+  width: 100%;
+}
+
+
+
 .swiper-container {
   height: 400rpx;
   width: 100%;

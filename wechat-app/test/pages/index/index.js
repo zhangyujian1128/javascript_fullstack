@@ -5,20 +5,17 @@ const app = getApp()
 Page({
   data: {
     list:[
-      { name: '转会', id: 'zhuanhui' },
-      { name: '头条', id: 'toutiao' },
-      { name: '热门', id: 'remen' },
-      { name: '西甲', id: 'xijia' },
-      { name: '欧冠', id: 'ouguan' },
-      { name: '深度', id: 'shendu' },
-      { name: '英超', id: 'yingchao' },
-      { name: '闲情', id: 'xianqiang' }
-    ],
-    match:[
-
+      { name: '转会'},
+      { name: '头条'},
+      { name: '热门'},
+      { name: '西甲'},
+      { name: '欧冠'},
+      { name: '深度'},
+      { name: '英超'},
+      { name: '闲情'}
     ],
     hotsearch: '梅西金球奖专访',
-    current: 'toutiao',
+    currentTab: 1,
     inputquery: '',
     msgList: [
         { url: "/image/swiper1.jpg", title: "今夜，巴塞罗那登上了欧洲之巅！" },
@@ -27,23 +24,35 @@ Page({
         { url: "/image/swiper4.jpeg", title: "C罗陷入球荒，各项赛事六轮不进" }
       ]
   },
-  clicktop(e){
-    this.setData({
-      current: e.currentTarget.dataset.id
-    })
-  },
+  //得到输入框的内容
   getinput(e){
     console.log(e.detail.value)
     this.setData({
       inputquery: e.detail.value
     })
   },
+  //清除输入框的内容
   clearinput(e){
     console.log(e)
     this.setData({
       inputquery: ''
     })
   },
+  //点击top
+  clicktop(e){
+    console.log(e)
+    this.setData({
+      currentTab: e.currentTarget.dataset.current
+    })
+  },
+  //滑动界面
+  bindchange(e){
+    console.log(e)
+    this.setData({
+      currentTab: e.detail.current
+    })
+  },
+  
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({

@@ -1,6 +1,7 @@
 <!-- 首页 -->
 <view class="firstPage">
 
+  <!-- 搜索框 -->
   <view class="search">
     <view class="input-father">
       <image class="fangdajing" src="../../image/fangdajing.png" />
@@ -8,48 +9,117 @@
       <image class="clear {{inputquery === '' ? 'hide':''}}" bindtap = "clearinput" src="../../image/cha.png" />  
     </view>
   </view>
-  
 
+  <!-- 自定义tabbar导航栏 -->
   <scroll-view scroll-x="true" class="firstPage-top">
-    <view bindtap = "clicktop" wx:for="{{list}}" wx:key="{{item.id}}" data-id="{{item.id}}" data-index="{{index}}"
-     class="top {{current === item.id ? 'on' : ''}}">{{item.name}}</view>
+    <view bindtap = "clicktop" wx:for="{{list}}" wx:key="{{index}}" data-current="{{index}}" data-index="{{index}}"
+     class="top {{currentTab === index ? 'on' : ''}}">{{item.name}}</view>
   </scroll-view>
 
-  <swiper class="swiper-container" horizontal="true"
-  indicator-dots="true" indicator-active-color="green"
-   autoplay="true" interval="3000" duration="800">
-    <block wx:for="{{msgList}}" wx:key="{{index}}">
-      <navigator>
-        <swiper-item>
-          <image class="slide-image" src="{{item.url}}" />
-          <view class="swiper-title">{{item.title}}</view>
-        </swiper-item>
-      </navigator>
-    </block>
-  </swiper>
-    
-  <view class="space">
-  </view>
-    
-  <view class="firstPage-match">
-    <view class="match-container">
-      <view class="left-team">
-        <image class="team-img" src="../../image/left-team.jpg" />
-        <span class="team-name">巴塞罗那</span>
-      </view>
-      <view class="match-infor">
-        <span class="match-name">欧冠 半决赛次回合</span>
-        <span class="match-time">明日凌晨04:00</span>
-        <span class="match-pointed">首回合3-2</span>
-        <span class="match-tv">CCTV5</span>
-      </view>
-      <view class="right-team">
-        <image class="team-img" src="../../image/right-team.jpg" />
-        <span class="team-name">皇家马德里</span>
-      </view>
-    </view>
+  <!-- 页面内容 -->
+  <view class="order-itembox">
+    <swiper class="swiper-box" current="{{currentTab}}" duration="200" bindchange="bindchange" >
+      
+      <swiper-item>
+          <scroll-view scroll-y="{{true}}">
+            <view class='order-item'> 
+              <span>第1个页面的数据</span>
+            </view> 
+          </scroll-view>
+      </swiper-item>
+
+      <swiper-item>
+          <scroll-view scroll-y="{{true}}">
+            <view class='order-item'>
+              
+              <swiper class="swiper-container" horizontal="true"
+                indicator-dots="true" indicator-active-color="green"
+                autoplay="true" interval="3000" duration="800">
+                  <block wx:for="{{msgList}}" wx:key="{{index}}">
+                    <navigator>
+                      <swiper-item>
+                        <image class="slide-image" src="{{item.url}}" />
+                        <view class="swiper-title">{{item.title}}</view>
+                      </swiper-item>
+                    </navigator>
+                  </block>
+              </swiper>
+              
+              <view class="space">
+              </view>
+              <view class="firstPage-match">
+                <view class="match-container">
+                  <view class="left-team">
+                    <image class="team-img" src="../../image/left-team.jpg" />
+                    <span class="team-name">巴塞罗那</span>
+                  </view>
+                  <view class="match-infor">
+                    <span class="match-name">欧冠 半决赛次回合</span>
+                    <span class="match-time">明日凌晨04:00</span>
+                    <span class="match-pointed">首回合3-2</span>
+                    <span class="match-tv">CCTV5</span>
+                  </view>
+                  <view class="right-team">
+                    <image class="team-img" src="../../image/right-team.jpg" />
+                    <span class="team-name">皇家马德里</span>
+                  </view>
+                </view>
+              </view>
+              <view class="space">
+              </view>
+
+            </view>
+          </scroll-view>
+      </swiper-item>
+
+      <swiper-item>
+          <scroll-view scroll-y="{{true}}">
+            <view class='order-item'> 
+              <span>第3个页面的数据</span>
+            </view> 
+          </scroll-view>
+      </swiper-item>
+
+      <swiper-item>
+          <scroll-view scroll-y="{{true}}">
+            <view class='order-item'>
+              <span>第4个页面的数据</span>
+            </view>
+          </scroll-view>
+      </swiper-item>
+      <swiper-item>
+          <scroll-view scroll-y="{{true}}">
+            <view class='order-item'> 
+              <span>第5个页面的数据</span>
+            </view> 
+          </scroll-view>
+      </swiper-item>
+
+      <swiper-item>
+          <scroll-view scroll-y="{{true}}">
+            <view class='order-item'>
+              <span>第6个页面的数据</span>
+            </view>
+          </scroll-view>
+      </swiper-item>
+
+      <swiper-item>
+          <scroll-view scroll-y="{{true}}">
+            <view class='order-item'> 
+              <span>第7个页面的数据</span>
+            </view> 
+          </scroll-view>
+      </swiper-item>
+
+      <swiper-item>
+          <scroll-view scroll-y="{{true}}">
+            <view class='order-item'>
+              <span>第8个页面的数据</span>
+            </view>
+          </scroll-view>
+      </swiper-item>
+
+    </swiper>
   </view>
 
-  <view class="space">
-  </view>
 </view>
