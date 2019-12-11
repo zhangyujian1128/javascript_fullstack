@@ -54,33 +54,17 @@
   font-size: 30rpx;
   line-height: 63rpx;
   overflow-x: scroll;
-  margin: 0 20rpx 0 20rpx;
+  margin: 0 30rpx;
   border: 1px solid #fff;
 }
 .on{
   font-size: 34rpx;
   color: rgb(51, 219, 65);
-  border-bottom: 5rpx solid rgb(117, 214, 122);
+  border-bottom: 5rpx solid rgb(51, 219, 65);
 }
-
-
-.order-itembox {
+.order-itembox .swiper-box .swiper-item .order-item{
   width: 100%;
 }
-.swiper-box{
-  width: 100%;
-}
-swiper-item{
-  width: 100%;
-}
-scoll-view{
-  width: 100%;
-}
-.order-item{
-  width: 100%;
-}
-
-
 
 .swiper-container {
   height: 400rpx;
@@ -172,6 +156,39 @@ scoll-view{
 .right-team{
   width: 200rpx;
   position: relative;
+}
+
+.firstPage-news .news-container .new{
+  width: 100%;
+  height: 220rpx;
+}
+.new{
+  display: flex;
+  position: relative;
+  border-bottom: 4rpx solid rgb(226, 226, 226);
+}
+
+.new-image{
+  width: 200rpx;
+  height: 180rpx;
+  position: relative;
+  top: 20rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.new-title{
+  position: relative;
+  width: 450rpx;
+  margin-right: 40rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.tip{
+  position: absolute;
+  font-size: smaller;
+  bottom: 20rpx;
+  right: 60rpx;
 }
 
 

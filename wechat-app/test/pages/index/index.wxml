@@ -18,18 +18,38 @@
 
   <!-- 页面内容 -->
   <view class="order-itembox">
-    <swiper class="swiper-box" current="{{currentTab}}" duration="200" bindchange="bindchange" >
-      
-      <swiper-item>
-          <scroll-view scroll-y="{{true}}">
+    <swiper class="swiper-box" style="height: {{secondHeight}}rpx" current="{{currentTab}}" duration="200" bindchange="bindchange" >
+      <!-- ??怎么设置swiper-item的高度 -->
+      <swiper-item class="swiper-item">
+          <scroll-view scroll-y="{{true}}" style="height= {{firstHeight}}rpx">
             <view class='order-item'> 
-              <span>第1个页面的数据</span>
+
+              <view class="firstPage-news">
+                <view class="news-container">
+                  <view class="new" wx:for="{{news}}" wx:key="{{index}}">
+                    <image class="new-image" src="{{item.url}}"/>
+                    <span class="new-title">{{item.title}}</span>
+                    <span class="tip">7评论</span>
+                  </view>
+                </view>
+              </view>
+
+              <view class="firstPage-news">
+                <view class="news-container">
+                  <view class="new" wx:for="{{news}}" wx:key="{{index}}">
+                    <image class="new-image" src="{{item.url}}"/>
+                    <span class="new-title">{{item.title}}</span>
+                    <span class="tip">7评论</span>
+                  </view>
+                </view>
+              </view>
+
             </view> 
           </scroll-view>
       </swiper-item>
 
-      <swiper-item>
-          <scroll-view scroll-y="{{true}}">
+      <swiper-item class="swiper-item">
+          <scroll-view scroll-y="{{true}}" style="height: {{secondHeight}}rpx">
             <view class='order-item'>
               
               <swiper class="swiper-container" horizontal="true"
@@ -44,9 +64,10 @@
                     </navigator>
                   </block>
               </swiper>
-              
+
               <view class="space">
               </view>
+
               <view class="firstPage-match">
                 <view class="match-container">
                   <view class="left-team">
@@ -65,7 +86,18 @@
                   </view>
                 </view>
               </view>
+
               <view class="space">
+              </view>
+
+              <view class="firstPage-news">
+                <view class="news-container">
+                  <view class="new" wx:for="{{news}}" wx:key="{{index}}">
+                    <image class="new-image" src="{{item.url}}"/>
+                    <span class="new-title">{{item.title}}</span>
+                    <span class="tip">7评论</span>
+                  </view>
+                </view>
               </view>
 
             </view>
@@ -73,48 +105,156 @@
       </swiper-item>
 
       <swiper-item>
-          <scroll-view scroll-y="{{true}}">
+          <scroll-view scroll-y="{{true}}" style="height= {{firstHeight}}rpx">
             <view class='order-item'> 
-              <span>第3个页面的数据</span>
+              <view class="firstPage-news">
+                <view class="news-container">
+                  <view class="new" wx:for="{{news}}" wx:key="{{index}}">
+                    <image class="new-image" src="{{item.url}}"/>
+                    <span class="new-title">{{item.title}}</span>
+                    <span class="tip">7评论</span>
+                  </view>
+                </view>
+              </view>
+
+              <view class="firstPage-news">
+                <view class="news-container">
+                  <view class="new" wx:for="{{news}}" wx:key="{{index}}">
+                    <image class="new-image" src="{{item.url}}"/>
+                    <span class="new-title">{{item.title}}</span>
+                    <span class="tip">7评论</span>
+                  </view>
+                </view>
+              </view>
             </view> 
           </scroll-view>
       </swiper-item>
 
       <swiper-item>
-          <scroll-view scroll-y="{{true}}">
+          <scroll-view scroll-y="{{true}}" style="height= {{firstHeight}}rpx">
             <view class='order-item'>
-              <span>第4个页面的数据</span>
+              <view class="firstPage-news">
+                <view class="news-container">
+                  <view class="new" wx:for="{{news}}" wx:key="{{index}}">
+                    <image class="new-image" src="{{item.url}}"/>
+                    <span class="new-title">{{item.title}}</span>
+                    <span class="tip">7评论</span>
+                  </view>
+                </view>
+              </view>
+
+              <view class="firstPage-news">
+                <view class="news-container">
+                  <view class="new" wx:for="{{news}}" wx:key="{{index}}">
+                    <image class="new-image" src="{{item.url}}"/>
+                    <span class="new-title">{{item.title}}</span>
+                    <span class="tip">7评论</span>
+                  </view>
+                </view>
+              </view>
             </view>
           </scroll-view>
       </swiper-item>
       <swiper-item>
-          <scroll-view scroll-y="{{true}}">
+          <scroll-view scroll-y="{{true}}" style="height= {{firstHeight}}rpx">
             <view class='order-item'> 
-              <span>第5个页面的数据</span>
+              <view class="firstPage-news">
+                <view class="news-container">
+                  <view class="new" wx:for="{{news}}" wx:key="{{index}}">
+                    <image class="new-image" src="{{item.url}}"/>
+                    <span class="new-title">{{item.title}}</span>
+                    <span class="tip">7评论</span>
+                  </view>
+                </view>
+              </view>
+
+              <view class="firstPage-news">
+                <view class="news-container">
+                  <view class="new" wx:for="{{news}}" wx:key="{{index}}">
+                    <image class="new-image" src="{{item.url}}"/>
+                    <span class="new-title">{{item.title}}</span>
+                    <span class="tip">7评论</span>
+                  </view>
+                </view>
+              </view>
             </view> 
           </scroll-view>
       </swiper-item>
 
       <swiper-item>
-          <scroll-view scroll-y="{{true}}">
+          <scroll-view scroll-y="{{true}}" style="height= {{firstHeight}}rpx">
             <view class='order-item'>
-              <span>第6个页面的数据</span>
+              <view class="firstPage-news">
+                <view class="news-container">
+                  <view class="new" wx:for="{{news}}" wx:key="{{index}}">
+                    <image class="new-image" src="{{item.url}}"/>
+                    <span class="new-title">{{item.title}}</span>
+                    <span class="tip">7评论</span>
+                  </view>
+                </view>
+              </view>
+
+              <view class="firstPage-news">
+                <view class="news-container">
+                  <view class="new" wx:for="{{news}}" wx:key="{{index}}">
+                    <image class="new-image" src="{{item.url}}"/>
+                    <span class="new-title">{{item.title}}</span>
+                    <span class="tip">7评论</span>
+                  </view>
+                </view>
+              </view>
             </view>
           </scroll-view>
       </swiper-item>
 
       <swiper-item>
-          <scroll-view scroll-y="{{true}}">
+          <scroll-view scroll-y="{{true}}" style="height= {{firstHeight}}rpx">
             <view class='order-item'> 
-              <span>第7个页面的数据</span>
+              <view class="firstPage-news">
+                <view class="news-container">
+                  <view class="new" wx:for="{{news}}" wx:key="{{index}}">
+                    <image class="new-image" src="{{item.url}}"/>
+                    <span class="new-title">{{item.title}}</span>
+                    <span class="tip">7评论</span>
+                  </view>
+                </view>
+              </view>
+
+              <view class="firstPage-news">
+                <view class="news-container">
+                  <view class="new" wx:for="{{news}}" wx:key="{{index}}">
+                    <image class="new-image" src="{{item.url}}"/>
+                    <span class="new-title">{{item.title}}</span>
+                    <span class="tip">7评论</span>
+                  </view>
+                </view>
+              </view>
             </view> 
           </scroll-view>
       </swiper-item>
 
       <swiper-item>
-          <scroll-view scroll-y="{{true}}">
+          <scroll-view scroll-y="{{true}}" style="height= {{firstHeight}}rpx">
             <view class='order-item'>
-              <span>第8个页面的数据</span>
+              <view class="firstPage-news">
+                <view class="news-container">
+                  <view class="new" wx:for="{{news}}" wx:key="{{index}}">
+                    <image class="new-image" src="{{item.url}}"/>
+                    <span class="new-title">{{item.title}}</span>
+                    <span class="tip">7评论</span>
+                  </view>
+                </view>
+              </view>
+
+              <view class="firstPage-news">
+                <view class="news-container">
+                  <view class="new" wx:for="{{news}}" wx:key="{{index}}">
+                    <image class="new-image" src="{{item.url}}"/>
+                    <span class="new-title">{{item.title}}</span>
+                    <span class="tip">7评论</span>
+                  </view>
+                </view>
+              </view>
             </view>
           </scroll-view>
       </swiper-item>
