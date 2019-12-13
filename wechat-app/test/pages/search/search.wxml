@@ -1,0 +1,30 @@
+<!--搜索页详情-->
+<view class="search-page">
+  <!-- 搜索框 -->
+  <view class="search">
+    <view class="input-father">
+      <image class="fangdajing" src="../../image/fangdajing.png" />
+      <input class="input" bindinput="getinput" type="text" placeholder="{{hotsearch}}" value="{{inputquery}}"/>
+      <image class="clear {{inputquery === '' ? 'hide':''}}" bindtap = "clearinput" src="../../image/cha.png" />  
+    </view>
+    
+    <view class="button">
+      <span class="tap">搜索</span>
+    </view>
+  </view>
+
+  <!-- 热门搜索 -->
+  <view class="hot-search">
+    
+    <view class="hotchat">
+      <span class="hot-chat">大家都在聊</span>
+    </view>
+    
+    <view class="search-list">
+      <view class="list">
+        <span class="tip">大伟大打发我发无法哇啊我发</span>
+        <image class="hot-icon" src="../../image/hot.png"/>
+      </view>
+    </view>
+  </view>
+</view>

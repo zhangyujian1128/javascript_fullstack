@@ -3,7 +3,7 @@
 
   <!-- 搜索框 -->
   <view class="search">
-    <view class="input-father">
+    <view class="input-father" bindtap="search">
       <image class="fangdajing" src="../../image/fangdajing.png" />
       <input class="input" bindinput="getinput" type="text" placeholder="{{hotsearch}}" value="{{inputquery}}"/>
       <image class="clear {{inputquery === '' ? 'hide':''}}" bindtap = "clearinput" src="../../image/cha.png" />  
@@ -47,7 +47,8 @@
             </view> 
           </scroll-view>
       </swiper-item>
-
+      
+      <!-- 头条界面 -->
       <swiper-item class="swiper-item">
           <scroll-view scroll-y="{{true}}" style="height: {{secondHeight}}rpx">
             <view class='order-item'>

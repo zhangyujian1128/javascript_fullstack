@@ -17,6 +17,7 @@ Page({
     hotsearch: '梅西金球奖专访',
     currentTab: 1,
     inputquery: '',
+
     firstHeight: 0,
     secondHeight: 0,
     thirdHeight: 0,
@@ -25,6 +26,7 @@ Page({
     sixthHeight: 0,
     seventhHeight: 0,
     eighthHeight: 0,
+    
     msgList: [
         { url: "/image/swiper1.jpg", title: "今夜，巴塞罗那登上了欧洲之巅！" },
         { url: "/image/swiper2.jpg", title: "梅西继续领跑射手榜" },
@@ -38,7 +40,12 @@ Page({
       { url: "../../image/swiper4.jpeg", title: "C罗陷入球荒，各项赛事六轮不进" }
     ]
   },
-  
+  //点击进入跳转
+  search: function(e){
+    wx.navigateTo({
+      url:'../search/search'
+    })
+  },
   //得到输入框的内容
   getinput(e){
     console.log(e.detail.value)
