@@ -26,21 +26,21 @@
 
               <view class="firstPage-news">
                 <view class="news-container">
-                  <view class="new" wx:for="{{news}}" wx:key="{{index}}">
-                    <image class="new-image" src="{{item.url}}"/>
+                  <navigator url="../new/new" class="new" wx:for="{{news}}" wx:key="{{index}}">
+                    <image class="new-image" src="{{item.src}}"/>
                     <span class="new-title">{{item.title}}</span>
                     <span class="tip">7评论</span>
-                  </view>
+                  </navigator>
                 </view>
               </view>
 
               <view class="firstPage-news">
                 <view class="news-container">
-                  <view class="new" wx:for="{{news}}" wx:key="{{index}}">
-                    <image class="new-image" src="{{item.url}}"/>
+                  <navigator url="../new/new" class="new" wx:for="{{news}}" wx:key="{{index}}">
+                    <image class="new-image" src="{{item.src}}"/>
                     <span class="new-title">{{item.title}}</span>
                     <span class="tip">7评论</span>
-                  </view>
+                  </navigator>
                 </view>
               </view>
 
@@ -57,9 +57,9 @@
                 indicator-dots="true" indicator-active-color="green"
                 autoplay="true" interval="3000" duration="800">
                   <block wx:for="{{msgList}}" wx:key="{{index}}">
-                    <navigator>
+                    <navigator data-id="{{index}}" url="../swiper/swiper?id={{index}}" bindtap="clickswiper">
                       <swiper-item>
-                        <image class="slide-image" src="{{item.url}}" />
+                        <image class="slide-image" src="{{item.src}}" />
                         <view class="swiper-title">{{item.title}}</view>
                       </swiper-item>
                     </navigator>
@@ -71,20 +71,20 @@
 
               <view class="firstPage-match">
                 <view class="match-container">
-                  <view class="left-team">
+                  <navigator class="left-team" url="../team/team">
                     <image class="team-img" src="../../image/left-team.jpg" />
                     <span class="team-name">巴塞罗那</span>
-                  </view>
-                  <view class="match-infor">
+                  </navigator>
+                  <navigator url="../matchpreview/matchpreview" class="match-infor">
                     <span class="match-name">欧冠 半决赛次回合</span>
                     <span class="match-time">明日凌晨04:00</span>
                     <span class="match-pointed">首回合3-2</span>
                     <span class="match-tv">CCTV5</span>
-                  </view>
-                  <view class="right-team">
+                  </navigator>
+                  <navigator class="right-team" url="../team/team">
                     <image class="team-img" src="../../image/right-team.jpg" />
                     <span class="team-name">皇家马德里</span>
-                  </view>
+                  </navigator>
                 </view>
               </view>
 
@@ -93,11 +93,11 @@
 
               <view class="firstPage-news">
                 <view class="news-container">
-                  <view class="new" wx:for="{{news}}" wx:key="{{index}}">
-                    <image class="new-image" src="{{item.url}}"/>
+                  <navigator url="../new/new" class="new" wx:for="{{news}}" wx:key="{{index}}">
+                    <image class="new-image" src="{{item.src}}"/>
                     <span class="new-title">{{item.title}}</span>
                     <span class="tip">7评论</span>
-                  </view>
+                  </navigator>
                 </view>
               </view>
 
@@ -110,101 +110,24 @@
             <view class='order-item'> 
               <view class="firstPage-news">
                 <view class="news-container">
-                  <view class="new" wx:for="{{news}}" wx:key="{{index}}">
-                    <image class="new-image" src="{{item.url}}"/>
+                  <navigator url="../new/new" class="new" wx:for="{{news}}" wx:key="{{index}}">
+                    <image class="new-image" src="{{item.src}}"/>
                     <span class="new-title">{{item.title}}</span>
                     <span class="tip">7评论</span>
-                  </view>
+                  </navigator>
                 </view>
               </view>
 
               <view class="firstPage-news">
                 <view class="news-container">
-                  <view class="new" wx:for="{{news}}" wx:key="{{index}}">
-                    <image class="new-image" src="{{item.url}}"/>
+                  <navigator url="../new/new" class="new" wx:for="{{news}}" wx:key="{{index}}">
+                    <image class="new-image" src="{{item.src}}"/>
                     <span class="new-title">{{item.title}}</span>
                     <span class="tip">7评论</span>
-                  </view>
+                  </navigator>
                 </view>
               </view>
             </view> 
-          </scroll-view>
-      </swiper-item>
-
-      <swiper-item>
-          <scroll-view scroll-y="{{true}}" style="height= {{firstHeight}}rpx">
-            <view class='order-item'>
-              <view class="firstPage-news">
-                <view class="news-container">
-                  <view class="new" wx:for="{{news}}" wx:key="{{index}}">
-                    <image class="new-image" src="{{item.url}}"/>
-                    <span class="new-title">{{item.title}}</span>
-                    <span class="tip">7评论</span>
-                  </view>
-                </view>
-              </view>
-
-              <view class="firstPage-news">
-                <view class="news-container">
-                  <view class="new" wx:for="{{news}}" wx:key="{{index}}">
-                    <image class="new-image" src="{{item.url}}"/>
-                    <span class="new-title">{{item.title}}</span>
-                    <span class="tip">7评论</span>
-                  </view>
-                </view>
-              </view>
-            </view>
-          </scroll-view>
-      </swiper-item>
-      <swiper-item>
-          <scroll-view scroll-y="{{true}}" style="height= {{firstHeight}}rpx">
-            <view class='order-item'> 
-              <view class="firstPage-news">
-                <view class="news-container">
-                  <view class="new" wx:for="{{news}}" wx:key="{{index}}">
-                    <image class="new-image" src="{{item.url}}"/>
-                    <span class="new-title">{{item.title}}</span>
-                    <span class="tip">7评论</span>
-                  </view>
-                </view>
-              </view>
-
-              <view class="firstPage-news">
-                <view class="news-container">
-                  <view class="new" wx:for="{{news}}" wx:key="{{index}}">
-                    <image class="new-image" src="{{item.url}}"/>
-                    <span class="new-title">{{item.title}}</span>
-                    <span class="tip">7评论</span>
-                  </view>
-                </view>
-              </view>
-            </view> 
-          </scroll-view>
-      </swiper-item>
-
-      <swiper-item>
-          <scroll-view scroll-y="{{true}}" style="height= {{firstHeight}}rpx">
-            <view class='order-item'>
-              <view class="firstPage-news">
-                <view class="news-container">
-                  <view class="new" wx:for="{{news}}" wx:key="{{index}}">
-                    <image class="new-image" src="{{item.url}}"/>
-                    <span class="new-title">{{item.title}}</span>
-                    <span class="tip">7评论</span>
-                  </view>
-                </view>
-              </view>
-
-              <view class="firstPage-news">
-                <view class="news-container">
-                  <view class="new" wx:for="{{news}}" wx:key="{{index}}">
-                    <image class="new-image" src="{{item.url}}"/>
-                    <span class="new-title">{{item.title}}</span>
-                    <span class="tip">7评论</span>
-                  </view>
-                </view>
-              </view>
-            </view>
           </scroll-view>
       </swiper-item>
 
@@ -213,21 +136,21 @@
             <view class='order-item'> 
               <view class="firstPage-news">
                 <view class="news-container">
-                  <view class="new" wx:for="{{news}}" wx:key="{{index}}">
-                    <image class="new-image" src="{{item.url}}"/>
+                  <navigator url="../new/new" class="new" wx:for="{{news}}" wx:key="{{index}}">
+                    <image class="new-image" src="{{item.src}}"/>
                     <span class="new-title">{{item.title}}</span>
                     <span class="tip">7评论</span>
-                  </view>
+                  </navigator>
                 </view>
               </view>
 
               <view class="firstPage-news">
                 <view class="news-container">
-                  <view class="new" wx:for="{{news}}" wx:key="{{index}}">
-                    <image class="new-image" src="{{item.url}}"/>
+                  <navigator url="../new/new" class="new" wx:for="{{news}}" wx:key="{{index}}">
+                    <image class="new-image" src="{{item.src}}"/>
                     <span class="new-title">{{item.title}}</span>
                     <span class="tip">7评论</span>
-                  </view>
+                  </navigator>
                 </view>
               </view>
             </view> 
@@ -236,27 +159,105 @@
 
       <swiper-item>
           <scroll-view scroll-y="{{true}}" style="height= {{firstHeight}}rpx">
-            <view class='order-item'>
+            <view class='order-item'> 
               <view class="firstPage-news">
                 <view class="news-container">
-                  <view class="new" wx:for="{{news}}" wx:key="{{index}}">
-                    <image class="new-image" src="{{item.url}}"/>
+                  <navigator url="../new/new" class="new" wx:for="{{news}}" wx:key="{{index}}">
+                    <image class="new-image" src="{{item.src}}"/>
                     <span class="new-title">{{item.title}}</span>
                     <span class="tip">7评论</span>
-                  </view>
+                  </navigator>
                 </view>
               </view>
 
               <view class="firstPage-news">
                 <view class="news-container">
-                  <view class="new" wx:for="{{news}}" wx:key="{{index}}">
-                    <image class="new-image" src="{{item.url}}"/>
+                  <navigator url="../new/new" class="new" wx:for="{{news}}" wx:key="{{index}}">
+                    <image class="new-image" src="{{item.src}}"/>
                     <span class="new-title">{{item.title}}</span>
                     <span class="tip">7评论</span>
-                  </view>
+                  </navigator>
                 </view>
               </view>
-            </view>
+            </view> 
+          </scroll-view>
+      </swiper-item>
+
+      <swiper-item>
+          <scroll-view scroll-y="{{true}}" style="height= {{firstHeight}}rpx">
+            <view class='order-item'> 
+              <view class="firstPage-news">
+                <view class="news-container">
+                  <navigator url="../new/new" class="new" wx:for="{{news}}" wx:key="{{index}}">
+                    <image class="new-image" src="{{item.src}}"/>
+                    <span class="new-title">{{item.title}}</span>
+                    <span class="tip">7评论</span>
+                  </navigator>
+                </view>
+              </view>
+
+              <view class="firstPage-news">
+                <view class="news-container">
+                  <navigator url="../new/new" class="new" wx:for="{{news}}" wx:key="{{index}}">
+                    <image class="new-image" src="{{item.src}}"/>
+                    <span class="new-title">{{item.title}}</span>
+                    <span class="tip">7评论</span>
+                  </navigator>
+                </view>
+              </view>
+            </view> 
+          </scroll-view>
+      </swiper-item>
+
+      <swiper-item>
+          <scroll-view scroll-y="{{true}}" style="height= {{firstHeight}}rpx">
+            <view class='order-item'> 
+              <view class="firstPage-news">
+                <view class="news-container">
+                  <navigator url="../new/new" class="new" wx:for="{{news}}" wx:key="{{index}}">
+                    <image class="new-image" src="{{item.src}}"/>
+                    <span class="new-title">{{item.title}}</span>
+                    <span class="tip">7评论</span>
+                  </navigator>
+                </view>
+              </view>
+
+              <view class="firstPage-news">
+                <view class="news-container">
+                  <navigator url="../new/new" class="new" wx:for="{{news}}" wx:key="{{index}}">
+                    <image class="new-image" src="{{item.src}}"/>
+                    <span class="new-title">{{item.title}}</span>
+                    <span class="tip">7评论</span>
+                  </navigator>
+                </view>
+              </view>
+            </view> 
+          </scroll-view>
+      </swiper-item>
+
+      <swiper-item>
+          <scroll-view scroll-y="{{true}}" style="height= {{firstHeight}}rpx">
+            <view class='order-item'> 
+              <view class="firstPage-news">
+                <view class="news-container">
+                  <navigator url="../new/new" class="new" wx:for="{{news}}" wx:key="{{index}}">
+                    <image class="new-image" src="{{item.src}}"/>
+                    <span class="new-title">{{item.title}}</span>
+                    <span class="tip">7评论</span>
+                  </navigator>
+                </view>
+              </view>
+
+              <view class="firstPage-news">
+                <view class="news-container">
+                  <navigator url="../new/new" class="new" wx:for="{{news}}" wx:key="{{index}}">
+                    <image class="new-image" src="{{item.src}}"/>
+                    <span class="new-title">{{item.title}}</span>
+                    <span class="tip">7评论</span>
+                  </navigator>
+                </view>
+              </view>
+            </view> 
           </scroll-view>
       </swiper-item>
 

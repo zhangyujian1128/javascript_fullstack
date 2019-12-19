@@ -28,20 +28,21 @@ Page({
     eighthHeight: 0,
     
     msgList: [
-        { url: "/image/swiper1.jpg", title: "今夜，巴塞罗那登上了欧洲之巅！" },
-        { url: "/image/swiper2.jpg", title: "梅西继续领跑射手榜" },
-        { url: "/image/swiper3.jpg", title: "“MSG”组合火力全开各入一球，巴塞罗那继续领跑积分榜第一名" },
-        { url: "/image/swiper4.jpeg", title: "C罗陷入球荒，各项赛事六轮不进" }
+        { src: "/image/swiper1.jpg", title: "今夜，巴塞罗那登上了欧洲之巅！" },
+        { src: "/image/swiper2.jpg", title: "梅西继续领跑射手榜" },
+        { src: "/image/swiper3.jpg", title: "“MSG”组合火力全开各入一球，巴塞罗那继续领跑积分榜第一名" },
+        { src: "/image/swiper4.jpeg", title: "C罗陷入球荒，各项赛事六轮不进" }
       ],
     news:[
-      { url: "../../image/swiper1.jpg", title: "今夜，巴塞罗那登上了欧洲之巅！" },
-      { url: "../../image/swiper2.jpg", title: "梅西继续领跑射手榜" },
-      { url: "../../image/swiper3.jpg", title: "“MSG”组合火力全开各入一球，巴塞罗那继续领跑积分榜第一名" },
-      { url: "../../image/swiper4.jpeg", title: "C罗陷入球荒，各项赛事六轮不进" }
+      { src: "../../image/swiper1.jpg", title: "今夜，巴塞罗那登上了欧洲之巅！" },
+      { src: "../../image/swiper2.jpg", title: "梅西继续领跑射手榜" },
+      { src: "../../image/swiper3.jpg", title: "“MSG”组合火力全开各入一球，巴塞罗那继续领跑积分榜第一名" },
+      { src: "../../image/swiper4.jpeg", title: "C罗陷入球荒，各项赛事六轮不进" }
     ]
   },
   //点击进入跳转
   search: function(e){
+    console.log(e)
     wx.navigateTo({
       url:'../search/search'
     })
@@ -74,6 +75,11 @@ Page({
       currentTab: e.detail.current
     })
   },
+  //点击轮播图
+  clickswiper(e){
+    console.log(e)
+  },
+  //生命周期onload中计算页面高度
   onLoad: function(){
     let oneheight = 224*this.data.news.length
     let twoheight = 400+12+180+12+(224*this.data.news.length)

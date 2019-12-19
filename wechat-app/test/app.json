@@ -1,11 +1,13 @@
 {
   "pages": [
-    
     "pages/index/index",
     "pages/match/match",
     "pages/data/data",
-    "pages/search/search"
-    
+    "pages/search/search",
+    "pages/matchpreview/matchpreview",
+    "pages/swiper/swiper",
+    "pages/team/team",
+    "pages/new/new"
   ],
   "window": {
     "backgroundTextStyle": "dark",

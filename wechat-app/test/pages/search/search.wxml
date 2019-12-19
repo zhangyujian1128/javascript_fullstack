@@ -21,8 +21,8 @@
     </view>
     
     <view class="search-list">
-      <view class="list">
-        <span class="tip">大伟大打发我发无法哇啊我发</span>
+      <view class="list" wx:for="{{hotsearchlist}}" wx:key="{{index}}">
+        <span class="tip">{{item.title}}</span>
         <image class="hot-icon" src="../../image/hot.png"/>
       </view>
     </view>

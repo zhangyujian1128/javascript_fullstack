@@ -73,9 +73,26 @@
   }
   .list{
       width: 100%;
+      position: relative;
+      border-bottom: 1px solid rgb(168, 168, 168);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+  }
+  .tip{
+    position: relative;
+    color: rgb(88, 88, 88);
+    width: 100%;
+    margin-left: 10rpx;
+    margin-top: 4rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .hot-icon{
-      width: 40rpx;
-      height: 40rpx;
-      top: 8rpx;
+    position: relative;
+    width: 40rpx;
+    height: 40rpx;
+    top: 8rpx;
+    margin-left: 6rpx;
   }

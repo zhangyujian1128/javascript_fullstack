@@ -1,0 +1,16 @@
+<!--pages/swiper/swiper.wxml-->
+<view class="swiper-item">
+    <text vx:if="{{id === 0}}" class="first">
+        1
+    </text>
+    <text vx:if="{{id === 1}}" class="second">
+        2
+    </text>
+    <text vx:if="{{id === 2}}" class="third">
+        3
+    </text> 
+    <text vx:if="{{id === 3}}" class="forth">
+        4
+    </text>   
+</view>
+  

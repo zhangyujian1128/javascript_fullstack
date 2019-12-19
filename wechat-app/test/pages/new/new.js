@@ -1,33 +1,11 @@
-// pages/search/search.js
+// pages/new/new.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    inputquery: '',
-    hotsearch: '梅西金球奖专访',
-    hotsearchlist:[
-      { title: "今夜，巴塞罗那登上了欧洲之巅！" },
-      { title: "梅西继续领跑射手榜" },
-      { title: "“MSG”组合火力全开各入一球，巴塞罗那继续领跑积分榜第一名" },
-      { title: "C罗陷入球荒，各项赛事六轮不进" }
-    ]
-  },
 
-  //得到输入框的内容
-  getinput(e){
-    console.log(e.detail.value)
-    this.setData({
-      inputquery: e.detail.value
-    })
-  },
-  //清除输入框的内容
-  clearinput(e){
-    console.log(e)
-    this.setData({
-      inputquery: ''
-    })
   },
 
   /**
