@@ -1,7 +1,6 @@
 //index.js
 //获取应用实例
-const app = getApp()
-
+const app = getApp();
 Page({
   data: {
     list:[
@@ -26,20 +25,10 @@ Page({
     sixthHeight: 0,
     seventhHeight: 0,
     eighthHeight: 0,
-    
-    msgList: [
-        { src: "/image/swiper1.jpg", title: "今夜，巴塞罗那登上了欧洲之巅！" },
-        { src: "/image/swiper2.jpg", title: "梅西继续领跑射手榜" },
-        { src: "/image/swiper3.jpg", title: "“MSG”组合火力全开各入一球，巴塞罗那继续领跑积分榜第一名" },
-        { src: "/image/swiper4.jpeg", title: "C罗陷入球荒，各项赛事六轮不进" }
-      ],
-    news:[
-      { src: "../../image/swiper1.jpg", title: "今夜，巴塞罗那登上了欧洲之巅！" },
-      { src: "../../image/swiper2.jpg", title: "梅西继续领跑射手榜" },
-      { src: "../../image/swiper3.jpg", title: "“MSG”组合火力全开各入一球，巴塞罗那继续领跑积分榜第一名" },
-      { src: "../../image/swiper4.jpeg", title: "C罗陷入球荒，各项赛事六轮不进" }
-    ]
+    msgList:[],
+    news:[]
   },
+  
   //点击进入跳转
   search: function(e){
     console.log(e)
@@ -87,7 +76,10 @@ Page({
     console.log(twoheight)
     this.setData({
       firstHeight: oneheight,
-      secondHeight: twoheight
+      secondHeight: twoheight,
+      //获取app.js中的msgList和news
+      msgList: app.globalData.msgList,
+      news: app.globalData.news
     })
   },
   getUserInfo: function(e) {
