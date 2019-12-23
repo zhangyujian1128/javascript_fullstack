@@ -4,7 +4,15 @@ const koaStatic = require('koa-static')
  
 var app = new Koa();
 var router = new Router();
- 
+
+router.get('/app1.js',async(ctx) =>{
+    console.log('app1.js 请求');
+    const fs = require('fs');
+    const content = fs.readFileSync('./app1.js','utf8');
+    const time = Date.now() + 1000 * 30;    //30s之后
+    ctx.set('cache-control','public,max-age=30');   //30s a => ServerA => ServerB
+    ctx.body = content;
+})
 router.get('/', (ctx, next) => {
   // ctx.router available
   ctx.body = `
@@ -26,9 +34,9 @@ router.get('/', (ctx, next) => {
  
 app.use(router.routes())
     .use(router.allowedMethods())
-    .use(koaStatic(__dirname));     //把磁盘上的文件路径映射为网络url
+    //.use(koaStatic(__dirname));     把磁盘上的文件路径映射为网络url
                                     //app1.js localhost:8090/app1.js
 
-app.listen(8090,()=>{
-    console.log(8090);
+app.listen(9090,()=>{
+    console.log(9090);
 })
