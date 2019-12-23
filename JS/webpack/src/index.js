@@ -1,5 +1,4 @@
 import _ from 'lodash'
-import './style/index.css'
 import './style/leo.scss'
 
 function createElement(){
