@@ -23,11 +23,21 @@ f(3) = 9
 响应头：
 1. expires(1.0) /cache-control(1.1): 时间
 2. Etag: abcd    last-modified: 文件最后修改时间
+3. Etag: 一个能标识文件内容唯一的东西 比如用一些哈希（hash）算法: MD5, sha-128, sha-256 
+   哈希算法:同样的内容 hash 完了之后 结果一定是一样的,不管 hash 任何东西，结果都是一个固定长度的字符串
+   md5('abc1234567') = xyz;
+   md5('abc1234567') = xyz;
+   md5(文件内容) = abc;
+   
+   第一次请求 md5(文件内容) = 'hash1'
+   第二次请求 md5(文件内容) = 'hash2'
 
 第二次请求的时候：
 ### 强缓存
 1. 浏览器判断缓存有没有过期（依据 cache-control）,如果没有,直接从缓存里面取内容,不经过服务器
+2. 状态码 200 from memory/disk cache
+3. expires: 确定的时间 2019122711:00:00  cache-control: 30 *60
 
 ### 协商缓存
-2. 过期：Etag 存在 -> 携带 if-none-match:abcd 服务器决策 200？ 304,如果304,从缓存里面取内容
+2. 过期：Etag 存在 -> 携带 if-none-match:abcd 服务器决策 200? 304,如果304,从缓存里面取内容
 3. Etag 不存在 -> 携带 if-modified-since: last-modified 200? 304

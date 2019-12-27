@@ -65,21 +65,23 @@ Page({
     })
   },
   //点击轮播图
-  clickswiper(e){
-    console.log(e)
-  },
+  // clickswiper(e){
+  //   console.log(e)
+  // },
   //生命周期onload中计算页面高度
   onLoad: function(){
+    this.setData({
+      //获取app.js中的msgList和news
+      msgList: app.globalData.msgList,
+      news: app.globalData.news
+    })
     let oneheight = 224*this.data.news.length
     let twoheight = 400+12+180+12+(224*this.data.news.length)
     console.log(oneheight)
     console.log(twoheight)
     this.setData({
       firstHeight: oneheight,
-      secondHeight: twoheight,
-      //获取app.js中的msgList和news
-      msgList: app.globalData.msgList,
-      news: app.globalData.news
+      secondHeight: twoheight
     })
   },
   getUserInfo: function(e) {

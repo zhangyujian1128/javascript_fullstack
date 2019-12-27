@@ -57,7 +57,7 @@
                 indicator-dots="true" indicator-active-color="green"
                 autoplay="true" interval="3000" duration="800">
                   <block wx:for="{{msgList}}" wx:key="{{index}}">
-                    <navigator data-id="{{index}}" url="../swiper/swiper?id={{index}}" bindtap="clickswiper">
+                    <navigator data-id="{{index}}" url="../swiper/swiper?id={{index}}">
                       <swiper-item>
                         <image class="slide-image" src="{{item.src}}" />
                         <view class="swiper-title">{{item.title}}</view>
