@@ -8,10 +8,10 @@
 //     console.log('服务跑起来了')
 // })
 
-// const koa = require('koa');
+// const Koa = require('koa');
 // const app = new Koa();
 
-// app.use((ctx, next)=>{
+// app.use((ctx)=>{ //中间件
 //     ctx.body = 'helloworld？'
 // })
 // app.listen(3000, ()=>{
@@ -20,14 +20,31 @@
 
 let myKoa = require('./lib/application')
 let app = new myKoa()
-app.use((ctx)=>{
-    // console.log(ctx.req.url)
-    // console.log(ctx.request.req.url)
-    // console.log(ctx.response.req.url)
-    // console.log(ctx.request.url)
-    // console.log(ctx.response.url)
-    // console.log(ctx.url)
-    // console.log(ctx.path)
+// app.use((ctx, next)=>{
+//     // console.log(ctx.req.url)
+//     // console.log(ctx.request.req.url)
+//     // console.log(ctx.response.req.url)
+//     // console.log(ctx.request.url)
+//     // console.log(ctx.response.url)
+//     // console.log(ctx.url)
+//     // console.log(ctx.path)
+//     ctx.body ={
+//         name: 'zyj',
+//         age: 10
+//     }
+//     console.log(ctx.body)
+//     next()
+    
+// })
+app.use((ctx, next) =>{
+    console.log(1)
+    next()
+    console.log(2)
+})
+app.use((ctx, next) =>{
+    console.log(3)
+    next()
+    console.log(4)
 })
 app.listen(3000, ()=>{
     console.log('跑')
