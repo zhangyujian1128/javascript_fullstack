@@ -1,0 +1,35 @@
+<template>
+  <div>
+    <el-dialog title="登陆" :visible="dialogVisible">
+      <el-form label-width="80px">
+        <el-form-item label="邮箱">
+          <el-input v-model="params.email" autocomplete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="密码" :label-width="formLabelWidth">
+          <el-input v-model="params.password"></el-input>
+        </el-form-item>
+      </el-form>
+      <div slot="footer" class="dialog-footer">
+        <el-button @click="handleAuthor">Github 授权登陆</el-button>
+        <el-button type="primary" @click="handleOk">登陆</el-button>
+      </div>
+    </el-dialog>
+  </div>
+</template>
+
+<script lang="ts">
+import { Vue, Component } from "vue-property-decorator";
+export default class RegisterAndLogin extends Vue {
+    private params: any ={
+        email:'',
+        password: ''
+    }
+
+    get dialogVisible(): boolean{
+        return true
+    }
+};
+</script>
+
+<style>
+</style>
