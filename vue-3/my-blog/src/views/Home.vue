@@ -1305,6 +1305,7 @@ mounted() {
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 100;
   .content {
     position: fixed;
     left: 0;
