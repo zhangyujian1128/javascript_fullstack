@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-function Cart (props){
+function Cart(props) {
     return (
         <table>
             <tbody>
-                {props.data.map(d =>(
+                {props.data.map(d => (
                     //循环tr
                     <tr key={d.text}>
                         <td>{d.text}</td>
@@ -22,15 +22,15 @@ function Cart (props){
 }
 
 export default class CartSample extends Component {
-    constructor (props){
+    constructor(props) {
         super(props)
 
         this.state = {
-            text: '' ,   //选择的商品名
-            goods:[
-                {id: 1, text: '你不知道的Javascript',price: 66},
-                {id: 2, text: '你不知道的Vue',price: 59},
-                {id: 3, text: '你不知道的React',price: 63}
+            text: '',   //选择的商品名
+            goods: [
+                { id: 1, text: '你不知道的Javascript', price: 66 },
+                { id: 2, text: '你不知道的Vue', price: 59 },
+                { id: 3, text: '你不知道的React', price: 63 }
             ],
             cart: [],
             history: []
@@ -38,29 +38,30 @@ export default class CartSample extends Component {
         this.addGoods = this.addGoods.bind(this)
     }
 
-    textChange(e){
+    textChange(e) {
         this.setState({
             text: e.target.value
         })
         console.log(e.target.value)
     }
-    
-    addGoods(){
-        this.setState(prevState =>({
-            goods: [...prevState.goods, {id: prevState.id, text: prevState.text, price: prevState.price}]
+
+    addGoods() {
+        this.setState(prevState => ({
+            //解构上一步的数据源State,并加入新的成员
+            goods: [...prevState.goods, { id: prevState.id, text: prevState.text, price: prevState.price }]
         }))
-        console.log('addGoods'+ this.state.prevState)
+        console.log(this.state.goods)
     }
     addCount = item => {
         const newCart = [...this.state.cart]
         const idx = newCart.findIndex(c => c.text === item.text)
-        newCart.splice(idx, 1, {...item,count: item.count +1})
+        newCart.splice(idx, 1, { ...item, count: item.count + 1 })
         this.setState({
             cart: newCart,
-            history:[...this.state.history,newCart]
+            history: [...this.state.history, newCart]
         })
     }
-    addToCart(good){
+    addToCart(good) {
         //为了保证视图更新，数组要保证引用地址变化，因此每次深复制一个新的数组
         const newCart = [...this.state.cart]
         //查询商品对应的购物项是否存在
@@ -68,11 +69,11 @@ export default class CartSample extends Component {
         //如果存在则取出
         const item = newCart[idx]
 
-        if(item){
+        if (item) {
             //更新对象
-            newCart.splice(idx, 1, {...item,count: item.count +1})
-        }else{
-            newCart.push({...good,count: 1})
+            newCart.splice(idx, 1, { ...item, count: item.count + 1 })
+        } else {
+            newCart.push({ ...good, count: 1 })
         }
         this.setState({
             cart: newCart,
@@ -80,25 +81,26 @@ export default class CartSample extends Component {
         })
     }
     //历史记录
-    go(his){
+    go(his) {
         this.setState({
             cart: his
         })
     }
-    render(){
+    render() {
+        //props是父组件给子组件传递的参数代表
         const title = this.props.title ? <h1>{this.props.title}</h1> : null
         //循环: 将js对象数组转化为jsx数组
         const goods = this.state.goods.map(good => (
             <li key={good.id}>
                 {good.text}
-                <button onClick={() =>this.addToCart(good)}>加购</button>
+                <button onClick={() => this.addToCart(good)}>加购</button>
             </li>
         ))
-        return(
+        return (
             <div>
                 {title}
                 <div>
-                    <input type="text" value={this.state.text} onChange = {e => this.textChange(e)}></input>
+                    <input type="text" value={this.state.text} onChange={e => this.textChange(e)}></input>
                     <button onClick={this.addGoods}>添加商品</button>
                 </div>
                 {/* 商品列表渲染 */}
@@ -110,14 +112,14 @@ export default class CartSample extends Component {
                 <Cart data={this.state.cart} addCount={this.addCount}></Cart>
 
                 {this.state.history.length > 0 ? <p>历史操作</p> : null}
-                {this.state.history.length > 0 ? <button key="-1" onClick={() =>this.setState({cart:[]})}>0</button> : null}
-                {this.state.history.map((his, i) =>(
-                    <button key ={i} onClick ={() => this.go(his)}>
+                {this.state.history.length > 0 ? <button key="-1" onClick={() => this.setState({ cart: [] })}>0</button> : null}
+                {this.state.history.map((his, i) => (
+                    <button key={i} onClick={() => this.go(his)}>
                         {i + 1}
                     </button>
                 ))}
             </div>
-            
+
         )
     }
 }
