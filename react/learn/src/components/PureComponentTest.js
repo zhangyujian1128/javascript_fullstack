@@ -15,8 +15,7 @@ class PureComponentTest extends Component {
         setTimeout(() => {
             this.setState({
                 comments: [
-                    { body: 'react is very good', author: 'facebook' },
-                    { body: 'vue is very good', author: 'youyuxi' }
+                    { body: 'react is very good', author: 'facebook' }
                 ]
             })
 
