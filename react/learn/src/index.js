@@ -3,7 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Lifecycle from './components/Lifecycle';
 import CommentVs from './components/CommentVs';
-import PureComponentTest from './components/PureComponentTest'
+import PureComponentTest from './components/PureComponentTest';
+import Hoc from './components/Hoc';
 import * as serviceWorker from './serviceWorker';//pwa支持
 
 // class App extends React.Component {
@@ -153,7 +154,7 @@ class featureReturnFraments extends React.Component {
 }
 
 
-ReactDOM.render(<PureComponentTest body='vue is very good' author='youyuxi'/>, document.getElementById('root'));
+ReactDOM.render(<Hoc state="React"/>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
