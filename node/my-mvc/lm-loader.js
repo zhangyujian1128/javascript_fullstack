@@ -24,7 +24,8 @@ function load(dir, cb){
 function initRouter (){
     const router = new Router()
     load('routes', (filename, routes)=>{
-        const prefix = filename === 'index'? '': `${filename}`
+        routes = typeof routes === 'function' ? routes(app) : routes
+        const prefix = filename === 'index'? '': `/${filename}`
         Object.keys(routes).forEach(key =>{
             const [method, path] = key.split(' ') // [get, /]
             console.log(`正在映射地址：${method.toLocaleUpperCase()} ${prefix}${path}` )
@@ -37,8 +38,17 @@ function initRouter (){
     return router
 }
 
+function initController (app){
+    const controllers = {}
+    load('controller',(filename, controller)=>{
+        controllers[filename] = controller
+    })
+    return controllers
+}
+
 module.exports = {
-    initRouter
+    initRouter,
+    initController
 }
 
 // load('routes', filename =>{
