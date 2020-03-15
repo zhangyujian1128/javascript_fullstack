@@ -17,8 +17,6 @@ function load (dir, cb) {
   })
 }
 
-
-
 // 加载路由
 function initRouter (app) {
   const router = new Router()
