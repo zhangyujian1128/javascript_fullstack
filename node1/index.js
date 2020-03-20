@@ -10,7 +10,6 @@ const views = require('koa-views')
 const staticCache = require('koa-static-cache')  //静态资源
 const config = require('./config/default.js')
 
-//缓存
 const app = new Koa()
 const router = new Router()
 
