@@ -6,7 +6,6 @@ const Router = require('koa-router')
 function load (dir, cb) {
   // 获取绝对路径
   const url = path.resolve(__dirname, dir)
-  // 读取目录
   const files = fs.readdirSync(url)
   // 遍历
   files.forEach(filename => {
