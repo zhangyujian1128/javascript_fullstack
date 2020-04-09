@@ -2,13 +2,16 @@
     padding: 0;
     margin: 0;
 }
+body{
+    text-align: center;
+}
 .table{
     border: 1px solid #000;
     border-collapse:collapse;
+    margin: auto;
 }
 .hang{
     border: 1px solid #000;
-    text-align: center;
     height: 40px;
 }
 td{
