@@ -1,0 +1,26 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.login{
+    border: 1px solid #000;
+    margin: auto;
+    border-collapse: collapse;
+}
+tr{
+    border: 1px solid #000;
+    height: 50px;
+}
+td{
+    border: 1px solid #000;
+    width: 200px;
+}
+td:last-child{
+    width: 400px;
+}
+.text1{
+    text-align: center;
+}
+input{
+    margin: auto;
+}
