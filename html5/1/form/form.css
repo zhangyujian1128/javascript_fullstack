@@ -21,6 +21,21 @@ td:last-child{
 .text1{
     text-align: center;
 }
+.text2{
+    text-align: center;
+}
 input{
-    margin: auto;
+    display: block;
+    height: 25px;
+    width: 250px;
+    margin: auto auto;
+}
+.button{
+    text-align: center;
+}
+button{
+    width: 60px;
+    height: 30px;
+    margin-left: 20px;
+    border-radius: 5px;
 }
