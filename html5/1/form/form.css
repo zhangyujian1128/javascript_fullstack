@@ -20,9 +20,11 @@ td:last-child{
 }
 .text1{
     text-align: center;
+    color: red;
 }
 .text2{
     text-align: center;
+    
 }
 input{
     display: block;
