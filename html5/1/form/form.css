@@ -1,7 +1,15 @@
-
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(../baidusousuo/img/1.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
 .login{
     border: 1px solid #000;
-    margin: auto;
+    margin: 0 auto;
     border-collapse: collapse;
 }
 tr{
