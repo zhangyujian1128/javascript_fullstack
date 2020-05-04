@@ -1,15 +1,29 @@
 <template>
   <div>
+    <!-- 姚贝娜 朱克 高毅 萱萱 侯磊 张目 田园
+    梦楠 六才行 陛下 单冲锋 田丹 张以呀 张恒远
+    李秋泽 王拓 梁君诺 李琦 张雅婷 张鑫 塔斯肯
+    网红地 武穆兰 苏梦 精锐戟 葛洪与 蘑菇兄弟 邓股 -->
     <img class="logo" src="../assets/logo.jpg" alt />
     <div class="header">
       <div class="input">
         <img class="front" src="../assets/search.png" alt />
-        <input class="search" type="text" placeholder="TOPSPORTS耐克满300减60" />
-        <img class="behind" src="../assets/camera.png" alt />
-      </div>
 
-      <div class="scan">扫一扫</div>
-      <div class="news">消息</div>
+        <router-link to="/Search">
+          <input class="search" type="text" placeholder="TOPSPORTS耐克满300减60" />
+        </router-link>
+        
+        <img class="behind" src="../assets/camera.png" alt="">
+      </div>
+      
+      <div class="scan">
+        <img class="scanlogo" src="../assets/scan.png" alt="">
+        <p class="scantitle">扫一扫</p>
+      </div>
+      <div class="news">
+        <img class="newslogo" src="../assets/news.png" alt="">
+        <p class="newstitle">消息</p>
+      </div>
     </div>
   </div>
 </template>
@@ -24,14 +38,16 @@ export default {};
   height: 140px;
 }
 .header{
-    float: left;
+  width: 100%;
+  height: 34px;
 }
 .input {
+  float: left;
   position: relative;
   width: 75%;
 }
 .search {
-  width: 55%;
+  width: 65%;
   height: 32px;
   font-size: 14px;
   border: 1px solid rgb(206, 206, 206);
@@ -51,13 +67,35 @@ export default {};
   position: absolute;
   width: 25px;
   height: 25px;
-  right: 23%;
+  right: 6%;
   top: 15%;
 }
 .scan{
-    font-size: 8px;
+  float: left;
+  font-size: 8px;
+  width: 12.5%;
+  text-align: center;
+}
+.scanlogo{
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+  
 }
 .news{
-    font-size: 8px;
+  float: left;
+  font-size: 8px;
+  width: 12.5%;
+  text-align: center;
+}
+.newslogo{
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+}
+.scantitle .newstitle{
+  color: rgb(255, 255, 255);
 }
 </style>

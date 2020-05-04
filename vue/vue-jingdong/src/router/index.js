@@ -6,6 +6,8 @@ import Discover from '@/components/Discover'
 import Cart from '@/components/Cart'
 import Mine from '@/components/Mine'
 
+import Search from '@/components/Search'
+
 
 Vue.use(Router)
 
@@ -35,6 +37,11 @@ export default new Router({
       path: '/Mine',
       name: 'Mine',
       component: Mine
+    },
+    {
+      path: '/Search',
+      name: 'Search',
+      component: Search
     }
   ]
 })
