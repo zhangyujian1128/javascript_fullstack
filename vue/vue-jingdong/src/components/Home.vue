@@ -1,21 +1,14 @@
 <template>
   <div>
-    <!-- 姚贝娜 朱克 高毅 萱萱 侯磊 张目 田园
-    梦楠 六才行 陛下 单冲锋 田丹 张以呀 张恒远
-    李秋泽 王拓 梁君诺 李琦 张雅婷 张鑫 塔斯肯
-    网红地 武穆兰 苏梦 精锐戟 葛洪与 蘑菇兄弟 邓股 -->
-    <img class="logo" src="../assets/logo.jpg" alt />
+    <!-- 头部搜索区域 -->
     <div class="header">
       <div class="input">
         <img class="front" src="../assets/search.png" alt />
-
         <router-link to="/Search">
           <input class="search" type="text" placeholder="TOPSPORTS耐克满300减60" />
         </router-link>
-        
         <img class="behind" src="../assets/camera.png" alt="">
       </div>
-      
       <div class="scan">
         <img class="scanlogo" src="../assets/scan.png" alt="">
         <p class="scantitle">扫一扫</p>
@@ -25,26 +18,51 @@
         <p class="newstitle">消息</p>
       </div>
     </div>
+    <!-- 广告区域 非点击 -->
+    <img class="logo" src="../assets/logo.jpg" alt />
+    <!-- 分类 -->
+    <div class="scroll">
+      
+        <div class="item-list" v-for="(item, index) in items" :key="index">
+          <router-link class="a" to=/Home/${item.route}>
+            {{item.name}}
+          </router-link>
+        </div>
+     
+    </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data(){
+    return{
+      items:[
+        {name:'首页',route: 'Shouye'},
+        {name:'图书',route: 'Tushu'},
+        {name:'手机',route: 'Shouji'},
+        {name:'食品',route: 'Shipin'},
+        {name:'生鲜',route: 'Shenxian'},
+        {name:'运动',route: 'Yundong'},
+        {name:'办公',route: 'Bangong'}
+      ]
+    }
+  }
+};
 </script>
 
 <style>
-.logo {
-  width: 100%;
-  height: 140px;
-}
 .header{
   width: 100%;
-  height: 34px;
+  height: 50px;
+  background: rgb(197, 18, 18);
+  color: white;
 }
 .input {
   float: left;
   position: relative;
   width: 75%;
+  top: 8px;
 }
 .search {
   width: 65%;
@@ -72,8 +90,9 @@ export default {};
 }
 .scan{
   float: left;
-  font-size: 8px;
+  font-size: 10px;
   width: 12.5%;
+  margin-top: 8px;
   text-align: center;
 }
 .scanlogo{
@@ -81,12 +100,12 @@ export default {};
   width: 20px;
   height: 20px;
   margin: 0 auto;
-  
 }
 .news{
   float: left;
-  font-size: 8px;
+  font-size: 10px;
   width: 12.5%;
+  margin-top: 8px;
   text-align: center;
 }
 .newslogo{
@@ -95,7 +114,37 @@ export default {};
   height: 20px;
   margin: 0 auto;
 }
-.scantitle .newstitle{
-  color: rgb(255, 255, 255);
+.scantitle{
+  margin-top: 3px;
+} 
+.newstitle{
+  margin-top: 3px;
+}
+.logo {
+  width: 100%;
+  height: 140px;
+}
+.scroll{
+  height: 40px;
+  width: 100%;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+.scroll::-webkit-scrollbar{
+  display: none;
+}
+.item-list{
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  width: 40px;
+  overflow-x: scroll;
+  margin: 0 25px;
+  border-bottom: 2px solid red;
+}
+.a{
+  text-decoration: none;
+  font-size: 16px;
 }
 </style>
