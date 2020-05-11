@@ -2,8 +2,11 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import Home from '@/components/Home'
+import News from '@/components/News'
 import Shouye from '@/components/Shouye'
 import Tushu from '@/components/Tushu'
+import Book from '@/components/Book'
+
 import Shouji from '@/components/Shouji'
 import Shipin from '@/components/Shipin'
 import Shenxian from '@/components/Shenxian'
@@ -11,7 +14,7 @@ import Yundong from '@/components/Yundong'
 import Bangong from '@/components/Bangong'
 
 import Sort from '@/components/Sort'
-import Discover from '@/components/Discover'
+// import Discover from '@/components/Discover'
 import Cart from '@/components/Cart'
 import Mine from '@/components/Mine'
 
@@ -71,11 +74,11 @@ export default new Router({
       name: 'Sort',
       component: Sort
     },
-    {
-      path: '/Discover',
-      name: 'Discover',
-      component: Discover
-    },
+    // {
+    //   path: '/Discover',
+    //   name: 'Discover',
+    //   component: Discover
+    // },
     {
       path: '/Cart',
       name: 'Cart',
@@ -90,6 +93,16 @@ export default new Router({
       path: '/Search',
       name: 'Search',
       component: Search
+    },
+    {
+      path: '/News',
+      name: 'News',
+      component: News
+    },
+    {
+      path: '/Book',
+      name: 'Book',
+      component: Book
     }
   ]
 })

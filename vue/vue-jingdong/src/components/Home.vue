@@ -1,35 +1,38 @@
 <template>
   <div>
     <!-- 头部搜索区域 -->
-    <div class="header">
-      <div class="input">
-        <img class="front" src="../assets/search.png" alt />
-        <router-link to="/Search">
-          <input class="search" type="text" placeholder="TOPSPORTS耐克满300减60" />
-        </router-link>
-        <img class="behind" src="../assets/camera.png" alt="">
-      </div>
-      <div class="scan">
-        <img class="scanlogo" src="../assets/scan.png" alt="">
-        <p class="scantitle">扫一扫</p>
-      </div>
-      <div class="news">
-        <img class="newslogo" src="../assets/news.png" alt="">
-        <p class="newstitle">消息</p>
+    <div class="container-header">
+      <div class="header">
+        <div class="input">
+          <img class="front" src="../assets/search.png" alt />
+          <router-link to="/Search">
+            <input class="search" type="text" placeholder="TOPSPORTS耐克满300减60" />
+          </router-link>
+          <img class="behind" src="../assets/camera.png" alt="">
+        </div>
+        <div class="scan">
+          <img class="scanlogo" src="../assets/scan.png" alt="">
+          <p class="scantitle">扫一扫</p>
+        </div>
+        <div class="news">
+          <img class="newslogo" @click="gotonews" src="../assets/news.png" alt="">
+          <p class="newstitle">消息</p>
+        </div>
       </div>
     </div>
+    
     <!-- 广告区域 非点击 -->
     <img class="logo" src="../assets/logo.jpg" alt />
     <!-- 分类 -->
     <div class="scroll">
-      
-        <div class="item-list" v-for="(item, index) in items" :key="index">
-          <router-link class="a" to=/Home/${item.route}>
+        <router-link class="item-list"
+         v-for="(item, index) in items" :to="item.route" :key="index">
+          <p class="name">
             {{item.name}}
-          </router-link>
-        </div>
-     
+          </p>
+        </router-link>
     </div>
+    <router-view/>
   </div>
 </template>
 
@@ -47,12 +50,21 @@ export default {
         {name:'办公',route: 'Bangong'}
       ]
     }
+  },
+  methods:{
+    gotonews(){
+      this.$router.push('/News')
+    }
   }
 };
 </script>
 
 <style>
+.container-header{
+  height: 50px;
+}
 .header{
+  position: fixed;
   width: 100%;
   height: 50px;
   background: rgb(197, 18, 18);
@@ -127,8 +139,10 @@ export default {
 .scroll{
   height: 40px;
   width: 100%;
+  color: rgb(235, 235, 235);
   overflow-x: scroll;
   white-space: nowrap;
+  border-bottom: 1px solid rgb(209, 209, 209);
 }
 .scroll::-webkit-scrollbar{
   display: none;
@@ -141,10 +155,12 @@ export default {
   width: 40px;
   overflow-x: scroll;
   margin: 0 25px;
-  border-bottom: 2px solid red;
-}
-.a{
+  padding-bottom: 4px;
+  
   text-decoration: none;
-  font-size: 16px;
+}
+.router-link-active{
+  color: red;
+  border-bottom: 1px solid red;
 }
 </style>

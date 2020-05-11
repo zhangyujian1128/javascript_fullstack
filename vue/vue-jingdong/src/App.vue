@@ -5,6 +5,7 @@
     <v-welcome v-on:miss="controlWelcome"></v-welcome>
     
     <!-- 底部导航栏 -->
+
     <div class="tab" v-if="!click">
 
       <div class="tab-item">
@@ -21,12 +22,12 @@
         </router-link>
       </div>
 
-      <div class="tab-item">
+      <!-- <div class="tab-item">
         <router-link class="a" to="/Discover">
           <img class="icon" src="./assets/discover.png" alt="">
           发现
         </router-link>
-      </div>
+      </div> -->
 
       <div class="tab-item">       
         <router-link class="a" to="/Cart">
@@ -86,7 +87,7 @@ export default {
   z-index: 999;
 }
 .tab-item{
-  width: 20%;
+  width: 25%;
   text-align: center;
 }
 .icon{
