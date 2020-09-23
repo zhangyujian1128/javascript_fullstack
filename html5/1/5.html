@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .banner{
+        display: flex;
+        width: 840px;
+        height: 30px;
+        line-height: 30px;
+        margin: 0 auto;
+        background-color: rgb(243, 198, 76);
+        justify-content: center;
+    }
+    .li{
+        width: 120px;
+        text-align: center;
+        position: relative;
+        cursor:pointer;
+    }
+    .a{
+        list-style-type:none;
+        margin: 0 auto;
+        width: 120px;
+        background: rgb(243, 198, 76);
+        position: absolute;
+        /* margin-top: -5px; */
+        display: none;
+    }
+    .product:hover .a{
+        display: block;
+    }
+    li:hover{
+        background-color: rgb(132, 223, 207);
+    }
+</style>
+<body>
+    <div>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</div>
+    <div class="banner">
+        <div class="li">首页</div>
+        <div class="li product"><a href="http://www.jxufe.edu.cn">产品</a>
+            <ul class="a">
+                <li><a href="http://www.baidu.com">面向用户</a></li>
+                <li>面向企业</li>
+                <li>创新科技</li>
+            </ul>
+        </div>
+        
+        <div class="li">解决方案</div>
+        
+        <div class="li">成功案例</div>
+        
+        <div class="li">人才招聘</div>
+        
+        <div class="li">新闻</div>
+        
+        <div class="li">关于我们</div>
+        
+    </div>
+    <div>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</div>
+</body>
+</html>

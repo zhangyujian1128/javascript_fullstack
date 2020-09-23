@@ -54,6 +54,10 @@
             </div>
       </div>
       <div class="fixed">
+          <div class="gotocart">
+              <img class="book-cart" @click="gotocart" src="../assets/cart.png" alt="">
+          </div>
+          
           <p @click="joinincart" class="joinincart">加入购物车</p>
           <p class="buyitnow">立即购买</p>
       </div>
@@ -80,6 +84,9 @@ export default {
             // }else{
             //     this.$router.push('/Cart')
             // }
+        },
+        gotocart(){
+            this.$router.push('/Cart')
         }
     }
 }
@@ -257,9 +264,19 @@ export default {
     background: white;
     z-index: 10;
 }
+.gotocart{
+    display: inline-block;
+    margin-left: 26%;
+}
+.book-cart{
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 5px;
+}
 .joinincart{
     display: inline-block;
-    margin-left: 36%;
+    margin-left: 5px;
     width: 30%;
     height: 30px;
     line-height: 30px;

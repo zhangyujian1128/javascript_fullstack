@@ -27,7 +27,6 @@ router.post('/userLogin', async(ctx, next) => {
   await userServies.userLogin(_username, _userpwd)
   .then((res) => {
     let r = '';
-    // console.log(res)
     if (res.length) {
       r = 'ok';
       let result = {
@@ -114,7 +113,7 @@ router.post('/userRegister',async(ctx, next) =>{
 
 })
 
-//根据分类名称查找对应的笔记列表
+//根据分类名称查找对应的商品列表
 router.post('/findNoteListBytype', async(ctx, next) =>{
   let note_type = ctx.request.body.note_type
   await userServies.findNoteListByType(note_type).then(async(res) =>{
@@ -142,7 +141,7 @@ router.post('/findNoteListBytype', async(ctx, next) =>{
   })
 })
 
-//根据id查找对应的笔记详情
+//根据id查找对应的商品详情
 router.post('/findNoteDetailById', async(ctx, next) =>{
   let id = ctx.request.body.id
   await userServies.findNoteDetailById(id)
@@ -172,7 +171,7 @@ router.post('/findNoteDetailById', async(ctx, next) =>{
   })
 })
 
-//发表笔记
+//发表评论
 router.post('/insertNote', async(ctx, next) =>{
   let c_time = utils.getNowFormatDate()
   let m_time = utils.getNowFormatDate()

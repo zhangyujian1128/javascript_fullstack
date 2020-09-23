@@ -18,7 +18,7 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 -- Table structure for note
 -- ----------------------------
-DROP TABLE IF EXISTS `note`;
+
 CREATE TABLE `note` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `useId` bigint(20) unsigned NOT NULL DEFAULT '0' COMMENT '作品所属用户',
@@ -32,7 +32,7 @@ CREATE TABLE `note` (
   `collection_id` int(11) DEFAULT NULL,
   `nickname` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='用户的作品';
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='用户的作品';
 
 -- ----------------------------
 -- Records of note
@@ -67,7 +67,7 @@ CREATE TABLE `users` (
   `userpwd` varchar(30) NOT NULL COMMENT '用户密码',
   `nickname` varchar(50) NOT NULL COMMENT '用户昵称',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- ----------------------------
 -- Records of users

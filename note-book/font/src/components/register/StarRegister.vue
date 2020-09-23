@@ -59,7 +59,7 @@ export default {
             })
         },
         login(){
-
+          this.$router.push({ path: '/StarLogin' })
         }
     }
 };

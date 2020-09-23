@@ -7,7 +7,7 @@
     <title>登陆表单</title>
 </head>
 <body>
-    <form action="http://www.baidu.com" method="post">
+    <form action="https://www.baidu.com" method="GET">
         <div>
             <table class="login">
                 <tr>
@@ -17,17 +17,19 @@
                 <tr>
                     <td class="text2">用户名：</td>
                     <td>
-                        <input type="text" title="请输入用户名" name="login">
+                        <input type="text" title="请输入用户名" name="loginname">
                     </td>
                 </tr>
                 <tr>
                     <td class="text2">密码：</td> 
                     <td>
                         <input type="password" title="请输入密码" name="pwd">
+                        <img src="" alt="">
                     </td>
                 </tr>
                 <tr>
                     <td colspan="2" class="button">
+                        <input type="file" value="选择文件">
                         <button type="submit">提交</button>
                         <button type="reset">重置</button>
                     </td>

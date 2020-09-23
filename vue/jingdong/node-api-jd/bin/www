@@ -1,0 +1,60 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+var app = require('../app');
+var debug = require('debug')('meituan:server');
+var http = require('http');
+// var io = require('socket.io')(http);
+var https = require('https');
+var fs = require('fs');
+
+
+//socket.io
+
+// io.on('connection', function (socket) {
+//   // socket.broadcast.emit('SendChat','asdsadsadasd');
+//   socket.on('SendChat', function (msg, fn) {
+//     io.emit('SendChat', msg);
+//     console.log("msg" + msg)
+//   });
+// });
+// var news = io.of('/news').on('connection', function (socket) {
+//   socket.emit('item', 'hahahahahahahhah');
+//   socket.join('room 237', () => { //将客户端添加到房间列表中，并可选择触发带err签名的回调（如果有的话）
+//     let rooms = Object.keys(socket.rooms);
+//     console.log(rooms); // [ <socket.id>, 'room 237' ]
+//   });
+// });
+
+//socket.io
+
+
+
+
+/**
+ * Get port from environment and store in Express.
+ */
+
+var httpPort = 3031;
+var httpsPort = 3032;
+
+/**
+ * Create HTTP server.
+ */
+
+var options = {
+  key: fs.readFileSync('/usr/local/nginx/conf/2_awei.fun.key'),
+  cert: fs.readFileSync('/usr/local/nginx/conf/1_awei.fun_bundle.crt')
+};
+
+var httpsServer = https.createServer(options, app);
+var httpServer = http.createServer(app);
+
+//https监听3000端口
+httpsServer.listen(httpsPort);
+
+//http监听3001端口
+httpServer.listen(httpPort);

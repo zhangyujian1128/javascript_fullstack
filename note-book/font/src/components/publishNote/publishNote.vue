@@ -7,7 +7,7 @@
     <div class="note-wrap">
         <div class="note-title">
             <h2>输入标题</h2>
-            <van-field v-model="title" placeholder="请输入笔记标题" />
+            <van-field v-model="title" placeholder="请输入评论标题" />
         </div>
         <div class="note-title">
             <h2>上传图片</h2>
@@ -22,7 +22,7 @@
             <span class="note-type" @click="selectType">选择分类 &gt; {{selectCon}}</span>
             <van-action-sheet v-model="show" :actions="actions" @select="onSelect" cancel-text ="取消" @cancel="onCancel"/>
         </div>
-        <div class="publish-btn" @click="publish">发布笔记</div>
+        <div class="publish-btn" @click="publish">发布评论</div>
     </div>
   </div>
 </template>

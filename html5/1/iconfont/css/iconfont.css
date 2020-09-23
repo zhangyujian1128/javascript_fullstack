@@ -1,0 +1,29 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1595354725003'); /* IE9 */
+  src: url('iconfont.eot?t=1595354725003#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAPcAAsAAAAACHAAAAOQAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDDAqELINvATYCJAMQCwoABCAFhG0HVxtgBxFVlNVkPw7sZq4O7xC5hFVi0xgLDX1ysOc/6tL3Jfkic1IgQt8UQHY6IcxJpxBPRVrdAAEEYTeXmrFhAogA+QlDV1s6uYfs9y/59Mo6XoaLUAFsAev/HDNePR9YfpvNJStwtDcejRIoOSrujo7sWtRvmF7iQFw6DwRAQx+MAi1asmoTJAS8aQSATh0/uh+ypoAYwRKk2NezVoBioECyUPYOQHT6+fQFE0gCDAqHd9G6I4sPYd77w++Pcsdz7OIOnP10ANgmgAMYBUAAtK3XsAE8D4wCh2YCAkOAew0j4P1Rz+P94Zhx2395AIGBA+SDJzAgZlKQA+8Ph2Qg4P0RMjDg/VEFOESJyRKADuAegJ9A0mufGA7FMLoHe/ST0jRvVldvqqnZXFe3tbb2GuBtyWjVfaur9ySFddqUkFJa2HUrc0rDy7ryzYldkzLTukzes6gkpfNmI6zEKdXNTQmppV3Du25N9oNRGqW9HqIVvOwGbeBhXaS+GmwWv+mp6OFlfvdAclc9sTO0404nI4kU89BBsZTkhpUAE6kVLJG/fycklvbjk5/x///5M58a0yJOmaXnD8nklZUccjMxDXLwfiGzk7slP3JDJYtJvnu1i9m/R5DRJevlkhhrUPdg7DX35swUp7+8fvVuF7NDjw5mF/iC0O7jc8xU99H1btcx5X50xRI79af7M9VeUjE6bMogO7W9tj3VHjSlfmfdSY1xY9Qlbzcd1GJqY7R+n19cs4NRYwb1DLJqYMxTq4NZYznU+K9GB5wDAHjl08d8Shpqm4bzfv98HGrqErvutWf9k/qzVzXNXou3yO6Vz/wkSAwY8w8zZxYJy/aUYpoTMpxkYYU5vDgZNN8NePAsHfztIeo8OxUgUucSmAC9gZMGIQRmFCh0k8BHmguakZ426zpiUzQVwAhfAEigb2Asb4AL9IMQmF9QdPEPPoFx0Gxpt6duSMe1wwVUghb0A4Kh3gVq2WTpr+gvreIqO8V9Ig/BDUWaN8NP2CPvsWC4+lLEgWPq4Awuw7YliEw1GkkrkbjPMtf3TqmhbrSxEEOKQBbQHkBgkJ6LK4tN6+NfIe+ipfBIQUP5CbFBaB0UUvkMxJOgn1XwLm8ZXHklIRzgMNIBZ6BDrR8gIPaPqiFDpKoVvmgvQ6XcXEF6vqh7w00AGu81IkacBCmwf4HpllxiYgKbFrf1EAdficxfqIuVDv1oBA==') format('woff2'),
+  url('iconfont.woff?t=1595354725003') format('woff'),
+  url('iconfont.ttf?t=1595354725003') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1595354725003#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-up-circle:before {
+  content: "\e665";
+}
+
+.icon-arrow-right-circle:before {
+  content: "\e666";
+}
+
+.icon-ashbin:before {
+  content: "\e667";
+}
+

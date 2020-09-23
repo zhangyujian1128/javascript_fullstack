@@ -58,6 +58,7 @@ let insertUser = function(value){
     return allServices.query(_sql, value)
 }
 
+
 //根据分类名称查找对应的笔记列表
 let findNoteListByType = function(note_type){
     let _sql =`select * from note where note_type="${note_type}";`

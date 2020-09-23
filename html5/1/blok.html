@@ -5,13 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
 </head>
+<style>
+    input{
+        -webkit-appearance: none;
+        width: 150px;
+        height: 70px;
+        border: 10px solid #c1c1c1;
+        border-radius: 50px;
+        background: #888;
+        position: relative;
+        box-shadow: 0 0 10px 1px #3f3f3f inset;
+        transition: 1s;
+    }
+    input:checked{
+        background: green;
+        
+    }
+    input::after{
+        content: '';
+        display: block;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        left: -5px;
+        top: -5px;
+        border-radius: 30px;
+        background: gray;
+        background: linear-gradient(180deg, #d3d3d3, #9e9e9e);
+        box-shadow: 0 2px 2px 0px #eee inset,2px 2px 2px 0px #333333;
+        transition: 1s;
+    }
+    input:checked::after{
+        left: 75px;
+        
+    }
+</style>
 <body>
-    <!-- h1-h6 标题 -->
-    <h1>大&nbsp;&nbsp;&nbsp;&nbsp;家的肌肤纠结啊王府井就发觉文件</h1>
-    <!-- &nbsp; 代表空格 -->
-    <!-- i 斜体 -->
-    <i>2019.10.30</i>
-    <hr>
-    
+    <input type="checkbox">
 </body>
 </html>

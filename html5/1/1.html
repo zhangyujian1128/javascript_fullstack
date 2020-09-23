@@ -4,37 +4,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .div1{
-            text-align:center;
-            width:100%;
-            height:200px;
-            background:#9F0;
-            
-        }
-        .div2{
-            display:block;
-            width:200px;
-            height:50px;
-            background:#00F;
-        }
-        span{
-            display:inline-block;
-            height:100px;
-            background:#0F0;	
-        }
-        
-        h1{
-            display:inline;
-            background:#F00;
-        }
-    </style>
 </head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .container{
+        width: 400px;
+        height: 640px;
+        margin: auto;
+        margin-top: 50px;
+        background-color: rgb(100, 165, 1);
+    }
+    .body{
+        padding: 20px;
+    }
+    .nav{
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: bold;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .contain{
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 5px;
+        margin-top: 4px;
+        margin-bottom: 4px;
+        background: rgb(42, 182, 61);
+        height: 35px;
+    }
+    .contains{
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 5px;
+        margin-top: 4px;
+        margin-bottom: 4px;
+        background: rgb(42, 182, 61);
+        height: 75px;
+    }
+    .names{
+        display: inline-block;
+        width: 35%;
+        height: 40%;
+        margin-left: 15px;
+        color: rgb(66, 66, 66);
+    }
+    .area{
+        margin-top: 10px;
+    }
+    .name{
+        display: inline-block;
+        width: 35%;
+        margin-left: 15px;
+        color: rgb(66, 66, 66);
+        font-size: 16px;
+        line-height: 35px;
+    }
+    .input{
+        height: 70%;
+        width: 50%;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 5px;
+    }
+    .a{
+        display: block;
+        width: 120px;
+        height: 30px;
+        font-size: 18px;
+        color: rgb(236, 236, 236);
+        background: rgb(73, 73, 73);
+        border: none;
+        border-radius: 25px;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+</style>
 <body>
-    <div class="div1">
-        <h1>我是中心</h1>
-        <div class="div2">第三个中心</div>
-        <span>这是中心</span>
-    </div>
+    <form action="http://www.baidu.com" method="GET">
+        <div class="container">
+            <div class="body">
+                <p class="nav">第一步，详细信息</p>
+                <div class="section">
+                    <div class="contain">
+                        <span class="name">姓名</span>
+                        <input class="input" type="text" placeholder="请输入姓名">
+                    </div>
+                    <div class="contain">
+                        <span class="name">电话</span>
+                        <input class="input" type="text" placeholder="123456789">
+                    </div>
+                    <div class="contain">
+                        <span class="name">facebook主页</span>
+                        <input class="input" type="text">
+                    </div>
+                </div>
+                <p class="nav">第二步，收货地址</p>
+                <div class="section">
+                    <div class="contains">
+                        <p class="names">详细地址</p>
+                        <textarea class="area" placeholder="详细地址" rows="3"></textarea>
+                    </div>
+                    <div class="contain">
+                        <span class="name">邮编</span>
+                        <input class="input" type="text" placeholder="邮编">
+                    </div>
+                </div>
+                <p class="nav">第三步，银行卡信息</p>
+                <div class="section">
+                    <div class="contain">
+                        <span class="name">银行卡类型</span>
+                        <input type="radio" name="cardType">借记卡
+                        <input type="radio" name="cardType">信用卡
+                        <input type="radio" name="cardType">VISA卡
+                    </div>
+                    <div class="contain">
+                        <span class="name">卡号</span>
+                        <input class="input" type="text" placeholder="123456789">
+                    </div>
+                    <div class="contain">
+                        <span class="name">密码</span>
+                        <input class="input" type="password" placeholder="起飞">
+                    </div>
+                    <div class="contain">
+                        <span class="name">持卡人</span>
+                        <input class="input" type="text" placeholder="起飞">
+                    </div>
+                </div>
+            </div>
+            <input type="button" class="a" value="提交">
+        </div>
+    </form>
+    
 </body>
 </html>

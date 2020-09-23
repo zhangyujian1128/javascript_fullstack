@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .father{
+        width: 100px;
+        text-align: center;
+        cursor:pointer;
+    }
+    .a{
+        padding-top: 10px;
+        width: 100px;
+        display: none;
+    }
+    li{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .father:hover{
+        background-color: yellow;
+    }
+    .father:hover .a{
+        display:block;
+    }
+    li:hover{
+        background-color: rgb(85, 224, 103);
+    }
+</style>
+<body>
+    <div class="father">
+        <p>业务</p>
+        <ul class="a">
+            <li>面向用户</li>
+            <li>面向企业</li>
+            <li>创新科技</li>
+        </ul>
+    </div>
+    
+    
+</body>
+</html>
