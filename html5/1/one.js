@@ -11,6 +11,9 @@
 // console.log(a)
 
 
+// for(let a = 1; a < 11; a++){
+//     console.log(a)
+// }
 
 
 // var a = 99; // 全局变量a
@@ -389,3 +392,4 @@ function show(){
 
 show();
 show();
+
