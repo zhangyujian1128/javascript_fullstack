@@ -384,12 +384,19 @@
 //     }
 //         a(listA)
 
-var a = 2;
-function show(){
-    a++;
-    console.log(a);
-}
+// var a = 2;
+// function show(){
+//     a++;
+//     console.log(a);
+// }
 
-show();
-show();
+// show();
+// show();
+
+var arr1 = [14,23,11,21,34,21]; //由小到大排列
+function sort(arr){
+    for(let i = 0; i < (arr.length - 1); i++){
+        for(let j = i+1; j < arr.length; j++)
+    }
+}
 
