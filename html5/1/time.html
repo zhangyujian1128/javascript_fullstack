@@ -11,30 +11,30 @@
         padding: 0;
         margin: 0;
     }
-    .box{
+    #box{
         width: 400px;
         height: 500px;
         background: rgb(126, 126, 126);
         margin: 0 auto;
         margin-top: 100px;
     }
-    .time{
+    #time{
         width: 100%;
         height: 120px;
         text-align: center;
         padding-top: 80px;
     }
-    .h,.m,.s{
+    #h,#m,#s{
         font-size: 40px;
     }
-    .a{
+    #a{
         font-size: 40px; 
     }
-    .button{
+    #button{
         width: 100%;
         text-align: center;
     }
-    .start,.stop,.over{
+    #start,#stop,#over{
         width: 200px;
         height: 40px;
         background: rgb(198, 201, 69);
@@ -43,31 +43,48 @@
     }
 </style>
 <body>
-    <div class="box">
-        <div class="time">
-            <span class="h">00</span><span class="a">:</span>
-            <span class="m">00</span><span class="a">:</span>
-            <span class="s">00</span>
+    <div id="box">
+        <div id="time">
+            <span id="h">00</span><span id="a">:</span>
+            <span id="m">00</span><span id="a">:</span>
+            <span id="s">00</span>
         </div>
-        <div class="button">
-            <button class="start">开始</button>
-            <button class="stop">暂停</button>
-            <button class="over">停止</button>
+        <div id="button">
+            <button id="start">开始</button>
+            <button id="stop">暂停</button>
+            <button id="over">停止</button>
         </div>
 
     </div>
     <script>
         function $(name){
-            return document.getElementsByClassName(name);
+            return document.getElementById(name);  
         }
         var count = 0;
         $("start").onclick = function(){
-            setInterval(()=>{
+            timer = setInterval(()=>{
                 count++;
-                $("s").innerHTML = count % 60;
-                $("m").innerHTML = count / 60;
-                $("h").innerHTML = count / 3600;
+                $("s").innerHTML = showNum(count % 60);
+                $("m").innerHTML = showNum(parseInt(count / 60) % 60);
+                $("h").innerHTML = showNum(parseInt(count / 3600));
             },1000)
+        } 
+        $("stop").onclick = function(){
+            clearInterval(timer)
+        }
+        $("over").onclick = function(){
+            clearInterval(timer)
+            count = 0;
+            $("s").innerHTML = "00";
+            $("m").innerHTML = "00";
+            $("h").innerHTML = "00";
+        }
+        function showNum(num){
+            if(num < 10){
+                return "0" +num;
+            }else{
+                return num;
+            }
         }
     </script>
 </body>
