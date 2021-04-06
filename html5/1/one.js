@@ -425,12 +425,26 @@
 // }
 // sort();
 
-var sort = function(){
-    setTimeout(()=>{
-        console.log('abc')
-    },3000)
+// var sort = function(){
+//     setTimeout(()=>{
+//         console.log('abc')
+//     },3000)
+// }
+// sort();
+
+async function f3(){
+    return 'f3';
 }
-sort();
+function f4(){
+    return 'f4'
+}
+
+async function f5(){
+    var c = await f3();
+    return c
+}
+console.log(f5())
+
 
 
 
