@@ -432,18 +432,36 @@
 // }
 // sort();
 
-async function f3(){
-    return 'f3';
-}
-function f4(){
-    return 'f4'
-}
+// async function f3(){
+//     return new Promise((resolve, reject)=>{
+//         setTimeout(()=>{
+//             resolve('abd')
+//         },2000)
+//     })
+// }
+// function f4(){
+//     return 'f4'
+// }
 
-async function f5(){
-    var c = await f3();
-    return c
-}
-console.log(f5())
+// async function f5(){
+//     var c = await f3();
+//     console.log(c)
+//     console.log('qqq')
+    
+// }
+// f5()
+
+console.log(1);
+setTimeout(()=>{
+    console.log(2);
+},600)
+setTimeout(()=>{
+    console.log(5);
+    setTimeout(()=>{
+        console.log(3)
+    },900)
+},800)
+console.log(4)
 
 
 
