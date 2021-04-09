@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery.js"></script>
+</head>
+<body>
+    <script>
+        //回调地狱
+        $.ajax({
+            type:'GET',
+            url:'./data1.json',
+            success : (res)=>{
+                const {id} = res //对象解构
+                console.log(id)
+
+                $.ajax({
+                    type:'GET',
+                    url:'./data2.json',
+                    data: {id},
+                    success : (res)=>{
+                        const {username} = res
+                        // console.log(res) 
+
+                        $.ajax({
+                            type:'GET',
+                            url:'./data3.json',
+                            data: {username},
+                            success : (res)=>{                               
+                                console.log(res) 
+                            }
+                        })
+                    }
+                })
+            }
+        })
+    </script>
+</body>
+</html>

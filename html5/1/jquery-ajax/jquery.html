@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery.js"></script>
+</head>
+<body>
+    <script>
+        new Promise((resolve,reject)=>{
+            $.ajax({
+                type: 'GET',
+                url: './data1.json',
+                success: (res)=>{
+                    //修改promise的状态为成功，修改promise的结果 res
+                    resolve(res)
+                    console.log(res)   // {id:1}
+                },
+                error: (err)=>{
+                    //修改promise的状态为失败，修改promise的结果err
+                    reject(err)
+                }
+            })
+        }).then((data)=>{
+            // console.log(data)    //{id:1}
+            const {id} = data
+            const p = new Promise((resolve,reject)=>{
+                $.ajax({
+                    type: 'GET',
+                    url: './data2.json',
+                    data: {id},
+                    success: (res)=>{
+                        //修改promise的状态为成功，修改promise的结果 res
+                        
+                        resolve(res)
+                    },
+                    error: (err)=>{
+                        //修改promise的状态为失败，修改promise的结果err
+                        reject(err)
+                    }
+                })
+            })
+            return p           
+        }).then((data)=>{
+            console.log(data)    //{id:1}
+            const {username} = data
+            return new Promise((resolve,reject)=>{
+                $.ajax({
+                    type: 'GET',
+                    url: './data3.json',
+                    data: {username},
+                    success: (res)=>{
+                        //修改promise的状态为成功，修改promise的结果 res
+                        resolve(res)
+                        console.log(res)
+                    },
+                    error: (err)=>{
+                        //修改promise的状态为失败，修改promise的结果err
+                        reject(err)
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+</html>
