@@ -451,17 +451,19 @@
 // }
 // f5()
 
-console.log(1);
-setTimeout(()=>{
-    console.log(2);
-},600)
-setTimeout(()=>{
-    console.log(5);
-    setTimeout(()=>{
-        console.log(3)
-    },900)
-},800)
-console.log(4)
+// console.log(1);
+// setTimeout(()=>{
+//     console.log(2);
+// },600)
+// setTimeout(()=>{
+//     console.log(5);
+//     setTimeout(()=>{
+//         console.log(3)
+//     },900)
+// },800)
+// console.log(4)
+
+
 
 
 
