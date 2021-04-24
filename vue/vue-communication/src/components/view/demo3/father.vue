@@ -4,7 +4,8 @@
       <p>从子组件获取的消息为：
           <span class="red">{{Msg}}</span>
       </p>
-        <child v-on:message="getMsg"></child>
+        <!-- <child v-on:message="getMsg"></child> -->
+        <child @message="getMsg"></child>
   </div>
 </template>
 

@@ -447,7 +447,6 @@
 //     var c = await f3();
 //     console.log(c)
 //     console.log('qqq')
-    
 // }
 // f5()
 
@@ -462,8 +461,19 @@
 //     },900)
 // },800)
 // console.log(4)
+function a(){
+    b();
+    console.log("1")
+    function b(){
+        c();
+        console.log("2")
+        function c(){
+            console.log("3");
+        }
+    }
+}
 
-//
+a();
 
 
 
