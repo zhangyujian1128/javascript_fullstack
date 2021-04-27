@@ -50,7 +50,7 @@ img {
 }
 .start {
   margin-top: 50px;
-  width: 320px;
+  width: 300px;
   height: 40px;
   background: rgb(255, 35, 35);
   border: 0px solid white;

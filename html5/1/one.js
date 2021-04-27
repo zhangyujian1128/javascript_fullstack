@@ -461,20 +461,25 @@
 //     },900)
 // },800)
 // console.log(4)
-function a(){
-    b();
-    console.log("1")
-    function b(){
-        c();
-        console.log("2")
-        function c(){
-            console.log("3");
-        }
-    }
+// function a(){
+//     b();
+//     console.log("1")
+//     function b(){
+//         c();
+//         console.log("2")
+//         function c(){
+//             console.log("3");
+//         }
+//     }
+// }
+// a();
+for(var i=0;i<5;i++){
+    setTimeout(()=>{
+        console.log(i++)
+    },100)
+    
 }
-
-a();
-
+console.log(i)
 
 
 

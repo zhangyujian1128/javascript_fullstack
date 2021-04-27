@@ -5,7 +5,7 @@
           <span class="red">{{Msg}}</span>
       </p>
         <!-- <child v-on:message="getMsg"></child> -->
-        <child @message="getMsg"></child>
+        <child v-on:message="getMsg"></child>
   </div>
 </template>
 
