@@ -481,16 +481,16 @@
 // }
 // console.log(i)
 
-new Promise((resolve,reject)=>{
-    resolve("hehe")
-}).then((res)=>{
-    console.log(res)
-    return res+'haha'
-},(res)=>{
-    console.log(res)
-}).then((res)=>{
-    console.log(res)
-})
+// new Promise((resolve,reject)=>{
+//     resolve("hehe")
+// }).then((res)=>{
+//     console.log(res)
+//     return res+'haha'
+// },(res)=>{
+//     console.log(res)
+// }).then((res)=>{
+//     console.log(res)
+// })
 
 
 
