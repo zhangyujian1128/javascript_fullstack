@@ -44,16 +44,16 @@
 // })
 
 // new Promise(function(resolve) {
-//     console.log('promise1');
+//     console.log('promise1');        //1
 //     for(var i = 0; i < 1000; i++) {
 //         i == 99 && resolve();
 //     }
-//     console.log('promise2');
+//     console.log('promise2');         //2
 // }).then(function() {
 //     console.log('then1');
 // })
 
-// console.log('global1');
+// console.log('global1');          //3
 
 // golb1 
 // glob1_promise
@@ -62,15 +62,15 @@
 // console.log('golb1');
 
 // setTimeout(function() {
-//     console.log('timeout1');
+//     console.log('timeout1');         //1
 //     process.nextTick(function() {
-//         console.log('timeout1_nextTick');
+//         console.log('timeout1_nextTick'); //3
 //     })
 //     new Promise(function(resolve) {
-//         console.log('timeout1_promise');
+//         console.log('timeout1_promise'); //2
 //         resolve();
 //     }).then(function() {
-//         console.log('timeout1_then')
+//         console.log('timeout1_then') //4
 //     })
 // })
 
@@ -86,7 +86,6 @@
 //         console.log('immediate1_then')
 //     })
 // })
-
 // process.nextTick(function() {
 //     console.log('glob1_nextTick');
 // })
@@ -99,15 +98,15 @@
 // })
 
 // setTimeout(function() {
-//     console.log('timeout2');
+//     console.log('timeout2');              //1
 //     process.nextTick(function() {
-//         console.log('timeout2_nextTick');
+//         console.log('timeout2_nextTick'); //3 
 //     })
 //     new Promise(function(resolve) {
-//         console.log('timeout2_promise');
+//         console.log('timeout2_promise');  //2
 //         resolve();
 //     }).then(function() {
-//         console.log('timeout2_then')
+//         console.log('timeout2_then')       //4
 //     })
 // })
 
@@ -343,6 +342,7 @@
 //         console.log('timeout_then')
 //     })
 // },1000)
+
 // var a = function () {
 //     console.log(11111)
 // }
@@ -461,6 +461,7 @@
 //     },900)
 // },800)
 // console.log(4)
+//1,4,2,5,3
 // function a(){
 //     b();
 //     console.log("1")
@@ -491,7 +492,28 @@
 // }).then((res)=>{
 //     console.log(res)
 // })
+// console.log('script start');
 
+// setTimeout(function() {
+//   console.log('timeout1');
+// }, 10);
+
+// new Promise(resolve => {
+//     console.log('promise1');
+//     resolve();
+//     setTimeout(() => console.log('timeout2'), 10);
+// }).then(function() {
+//     console.log('then1')
+// })
+
+// console.log('script end');
+
+//script start
+//promise1
+//script end
+//then1
+//timeout1
+//timeout2
 
 
 
