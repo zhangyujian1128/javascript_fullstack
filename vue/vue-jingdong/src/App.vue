@@ -103,7 +103,7 @@ export default {
   font-size: 12px;
   line-height: 12px;
 }
-.router-link-active{
-  color: red;
+.router-link-active{ 
+ color: red;
 }
 </style>

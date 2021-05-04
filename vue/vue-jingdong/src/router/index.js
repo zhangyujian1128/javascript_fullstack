@@ -30,7 +30,7 @@ export default new Router({
       path: '/Home',
       name: 'Home',
       component: Home,
-      redirect:'/Home/Shouye',
+      redirect:'/Home/Tushu',
       children:[
         {
           path: 'Shouye',
