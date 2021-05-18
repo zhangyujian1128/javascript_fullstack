@@ -21,11 +21,15 @@ router.get('/all',async(ctx, next) =>{
 
 //登录
 router.post('/userLogin', async(ctx, next) => {
-  var _username = ctx.request.body.username
-  var _userpwd = ctx.request.body.userpwd
+  var _username = ctx.request.body.username         //???
+  var _userpwd = ctx.request.body.userpwd           //？？？
 
   await userServies.userLogin(_username, _userpwd)
   .then((res) => {
+    // console.log(res)
+    //
+    // ctx.body = res
+    //
     let r = '';
     if (res.length) {
       r = 'ok';

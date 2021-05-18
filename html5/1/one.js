@@ -474,14 +474,18 @@
 //     }
 // }
 // a();
-// for(var i=0;i<5;i++){
-//     setTimeout(()=>{
+
+// for(let i=0;i<5;i++){
+    
 //         console.log(i++)
-//     },100)
+    
     
 // }
-// console.log(i)
-
+//5,5,6,7,8,9
+// for(let i =0; i<5;i++){
+//   console.log(i++)
+// }
+//5，6，6
 // new Promise((resolve,reject)=>{
 //     resolve("hehe")
 // }).then((res)=>{
@@ -515,6 +519,78 @@
 //timeout1
 //timeout2
 
-//
+// function test(person) {
+//   person.age = 26
+//   person = {
+//     name: 'yyy',
+//     age: 30
+//   }
+
+//   return person
+// }
+// const p1 = {
+//   name: 'yck',
+//   age: 25
+// }
+// const p2 = test(p1)
+// console.log(p1) // -> ?
+// console.log(p2) // -> ?
+// var a = 1
+// function foo() {
+//   console.log(this.a)
+// }
+// foo()       //1
+// console.log(typeof null)
+
+// b =1
+// function a() {
+//   return () => {
+//     return () => {
+//       console.log(this.b)
+//     }
+//   }
+// }
+// a()()()
+
+// var a = ['12','23','34','45']
+// console.log(a.join('+'))
+
+// console.log('script start')
+
+// async function async1() {
+//   await async2()
+//   console.log('async1 end')
+// }
+// async function async2() {
+//   console.log('async2 end')
+// }
+// async1()
+
+// setTimeout(function() {
+//   console.log('setTimeout')
+// }, 0)
+
+// new Promise(resolve => {
+//   console.log('Promise')
+//   resolve()
+// })
+//   .then(function() {
+//     console.log('promise1')
+//   })
+//   .then(function() {
+//     console.log('promise2')
+//   })
 
 
+// console.log('script end')
+// let x =0 
+// for(let i = 0;i<10;i++){
+//   // x=x+1
+//   // x=x++
+//   //  x= x+1 =x++
+// }
+// console.log(x)
+
+// let arr = [1,2,3]
+// console.log(arr.sort())
+// console.log(arr)

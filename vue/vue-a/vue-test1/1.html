@@ -10,13 +10,18 @@
 <body>
     <div id="app">
         <div>{{message}}</div>
-		<button>点击</button>
+		<button @click = "click">点击</button>
     </div>
     <script>
         var app = new Vue({
             el: '#app',
             data: {
                 message: 'hello Vue!'
+            },
+            methods: {
+                click(){
+                    this.message = 'click me'
+                }
             }
         })
     </script>
