@@ -570,15 +570,31 @@
 //   console.log('setTimeout')
 // }, 0)
 
-// new Promise(resolve => {
-//   console.log('Promise')
-//   resolve()
-// })
-//   .then(function() {
-//     console.log('promise1')
-//   })
-//   .then(function() {
+new Promise((resolve,reject) => {
+  console.log('Promise')
+  reject('abc')
+  console.log(1)
+})
+.then(function(e) {
+  console.log('promise1' + e)
+  },function(e) {
+    console.log('promise1' + e +1)
+
+    return 'abc'
+
+  })
+.then(
+  (e)=>{
+  console.log(e),
+  (e)=>{
+    console.log(e + 2)
+  }
+})
+
+// .then(function() {
 //     console.log('promise2')
+//   },function(e) {
+//     console.log('promise3' + e)
 //   })
 
 
@@ -594,3 +610,52 @@
 // let arr = [1,2,3]
 // console.log(arr.sort())
 // console.log(arr)
+
+// let a = 2
+// let b = [1,0]
+// let c = a - b[0]
+// console.log(c)
+
+
+
+// var twoSum = function(nums, target) {
+//     for(let i = 0; i < nums.length;i++){
+//       let cha = (target - nums[i])
+//       if((cha != nums[i])&&(nums.indexOf(cha) != -1)){
+//         let a = [i]
+//         a.push(nums.indexOf(cha))
+//         console.log(a)
+//         break
+//       }
+//     }
+// };
+
+// twoSum([1,2,3,4,5],9)
+
+//递归爬楼梯 第一版
+// var climbStairs = function(n) {
+//   if(n < 1){
+//       return 
+//   }else if(n == 1){
+//       return 1
+//   }else if(n == 2){
+//       return 2
+//   }
+//   return climbStairs(n-1)+climbStairs(n-2)
+// };
+
+//递归爬楼梯 第二版 （避免重复运算，利用数组保存数值）
+
+// var climbStairs = function(n) {
+//   let arr = []
+//   arr.push(1)
+//   arr.push(2)
+//   if(n>=3){
+//       for(let i =2; i<n;i++){
+//           arr.push(arr[i-1]+arr[i-2])
+//       }
+//   }
+  
+//   return arr[n-1]
+// };
+

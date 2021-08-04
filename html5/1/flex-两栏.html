@@ -4,12 +4,30 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="./app.css">
 </head>
+<style>
+  *{
+    padding: 0;
+    margin: 0;
+  }
+  .parent{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .stable{
+    width: 200px;
+    height: 100%;
+  }
+  .change{
+    flex: 1;
+  }
+</style>
 <body>  
   <div class="parent">  
     <div class="stable">stable 固定宽度200px</div> 
-    <input type="checkbox" name="" id="">
     <div class="change">changeable 可变宽度</div> 
-     <div class="stable">stable 固定宽度200px</div> 
+    <div class="stable">stable 固定宽度200px</div> 
   </div>  
 </body>  
 </html>

@@ -9,6 +9,7 @@
 </head>
 <body>
     <script>
+        //promise接收a函数为参数，a函数有两个函数作为参数resolve()和reject(),创建promise对象时直接调用a函数。resolve和reject函数的执行,谁先执行就谁运行，并切换状态
         new Promise((resolve,reject)=>{
             $.ajax({
                 type: 'GET',
@@ -21,7 +22,7 @@
                 error: (err)=>{
                     //修改promise的状态为失败，修改promise的结果err
                     reject(err)
-                }
+                } 
             })
         }).then((data)=>{
             // console.log(data)    //{id:1}
