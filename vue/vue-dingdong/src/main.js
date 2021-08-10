@@ -7,6 +7,8 @@ import router from './router'
 // import 'vant/lib/vant-css/index.css'
 // Vue.use(Vant)
 
+import {Button, Row, Col, Swipe, SwipeItem} from 'vant'        //按需引入
+Vue.use(Button).use(Row).use(Col).use(Swipe).use(SwipeItem)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
