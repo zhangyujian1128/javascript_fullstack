@@ -19,7 +19,7 @@
       <div class="swiper-area">
         <van-swipe :autoplay="autoPlayTime">
           <van-swipe-item v-for="(banner,index) in bannerPicArray" :key="index">
-            <img src="banner" width="100%" height="200px" alt="">
+            <img class="swiper-pic" src="../../assets/images/1.png" alt="">
           </van-swipe-item>
         </van-swipe>
       </div>
@@ -32,10 +32,11 @@
 export default {
   data(){
     return {
-      msg: 'Shopping Mall',
       locationIcon: require('../../assets/images/location.png'),
       bannerPicArray: [
-        
+        '../../assets/images/1.png',
+        '../../assets/images/1.png',
+        '../../assets/images/1.png'
       ],
       autoPlayTime: 4000
     }
@@ -72,5 +73,12 @@ export default {
   }
   .search-mini{
     text-align: center;
+  }
+  .swiper-area{
+    clear: both;
+  }
+  .swiper-pic{
+    width: 100%;
+    height: 12rem;
   }
 </style>
