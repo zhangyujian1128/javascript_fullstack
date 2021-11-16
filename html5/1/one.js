@@ -570,26 +570,26 @@
 //   console.log('setTimeout')
 // }, 0)
 
-new Promise((resolve,reject) => {
-  console.log('Promise')
-  reject('abc')
-  console.log(1)
-})
-.then(function(e) {
-  console.log('promise1' + e)
-  },function(e) {
-    console.log('promise1' + e +1)
+// new Promise((resolve,reject) => {
+//   console.log('Promise')
+//   reject('abc')
+//   console.log(1)
+// })
+// .then(function(e) {
+//   console.log('promise1' + e)
+//   },function(e) {
+//     console.log('promise1' + e +1)
 
-    return 'abc'
+//     return 'abc'
 
-  })
-.then(
-  (e)=>{
-  console.log(e),
-  (e)=>{
-    console.log(e + 2)
-  }
-})
+//   })
+// .then(
+//   (e)=>{
+//   console.log(e),
+//   (e)=>{
+//     console.log(e + 2)
+//   }
+// })
 
 // .then(function() {
 //     console.log('promise2')
@@ -658,4 +658,40 @@ new Promise((resolve,reject) => {
   
 //   return arr[n-1]
 // };
+//  let a = [1,2,3];
+//  let b = a.slice();
+//  console.log(a);
+//  console.log(b);
+//  console.log( a == b);
+//  console.log(a === b);
+//  a[0] = 4;
+//  console.log(a);
+//  console.log(b)
 
+// function Animal(){
+//   this.eat = function(){
+//     console.log("eat")
+//   }
+// }
+
+// function Cat(){
+//   Animal.call(this)
+// }
+
+// let cat = new Cat()
+// cat.eat()
+
+// const arr = [1,2,3,4,5,6]
+// let arr1 = arr.map((a,b,c) => {
+
+// });
+// console.log(arr1)
+
+function Person(){
+  this.name = 'human',
+  this.fullage = 100
+}
+
+let peop = new Person();
+console.log(peop);
+console.log(peop.__proto__)
